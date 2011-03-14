@@ -1,0 +1,24 @@
+BEGIN video_capture
+OPTION IPTYPE = IP
+OPTION STYLE = HDL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = vhdl
+OPTION USAGE_LEVEL = BASE_USER
+OPTION ARCH_SUPPORT_MAP = (OTHERS = DEVELOPMENT)
+
+PORT YCrCb_in           = "", DIR=IN, VEC=  [9:2]  
+PORT LLC_CLOCK          = "", DIR=IN, IOB_STATE=BUF  
+PORT R                  = "", DIR=OUT, VEC= [7:0]
+PORT G                  = "", DIR=OUT, VEC= [7:0]
+PORT B                  = "", DIR=OUT, VEC= [7:0]
+PORT PIXEL_CLOCK        = "", DIR=OUT, IOB_STATE=BUF  
+PORT H_SYNC_Z           = "", DIR=OUT 
+PORT V_SYNC_Z           = "", DIR=OUT 
+PORT BLANK_Z            = "", DIR=OUT 
+PORT COMP_SYNC          = "", DIR=OUT
+PORT RESET_VDEC1_Z      = "", DIR=OUT
+PORT VDEC1_OE_Z         = "", DIR=OUT        
+PORT VDEC1_PWRDN_Z      = "", DIR=OUT 
+PORT system_dcm_locked  = "", DIR=IN   
+
+END

@@ -1,0 +1,1195 @@
+PBD VERSION 1
+SCHEMATIC VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    ATTR MhsPort_sys_clk_pin "sys_clk_pin:dcm_clk_s:*:Input:External:Normal:None"
+    ATTR MhsPort_sys_rst_pin "sys_rst_pin:sys_rst_s:*:Input:External:Normal:None"
+    ATTR MhsPort_fpga_0_RS232_Uart_1_RX_pin "fpga_0_RS232_Uart_1_RX_pin:fpga_0_RS232_Uart_1_RX:*:Input:External:Normal:None"
+    ATTR MhsPort_fpga_0_RS232_Uart_1_TX_pin "fpga_0_RS232_Uart_1_TX_pin:fpga_0_RS232_Uart_1_TX:*:Output:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_CLK_pin "fpga_0_SysACE_CompactFlash_SysACE_CLK_pin:fpga_0_SysACE_CompactFlash_SysACE_CLK:*:Input:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_MPA_pin "fpga_0_SysACE_CompactFlash_SysACE_MPA_pin:fpga_0_SysACE_CompactFlash_SysACE_MPA:[6;0]:Output:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_MPD_pin "fpga_0_SysACE_CompactFlash_SysACE_MPD_pin:fpga_0_SysACE_CompactFlash_SysACE_MPD:[15;0]:BiDirectional:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_CEN_pin "fpga_0_SysACE_CompactFlash_SysACE_CEN_pin:fpga_0_SysACE_CompactFlash_SysACE_CEN:*:Output:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_OEN_pin "fpga_0_SysACE_CompactFlash_SysACE_OEN_pin:fpga_0_SysACE_CompactFlash_SysACE_OEN:*:Output:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_WEN_pin "fpga_0_SysACE_CompactFlash_SysACE_WEN_pin:fpga_0_SysACE_CompactFlash_SysACE_WEN:*:Output:External:Normal:None"
+    ATTR MhsPort_fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin:fpga_0_SysACE_CompactFlash_SysACE_MPIRQ:*:Input:External:Normal:None"
+    ATTR MhsPort_LLC_CLOCK "LLC_CLOCK:LLC_CLOCK:*:Input:External:Normal:None"
+    ATTR MhsPort_Sda_decoder "Sda_decoder:Sda_decoder:*:BiDirectional:External:Normal:None"
+    ATTR MhsPort_Scl_decoder "Scl_decoder:Scl_decoder:*:BiDirectional:External:Normal:None"
+    ATTR MhsPort_YCrCb_in "YCrCb_in:YCrCb_in:[9;2]:Input:External:Normal:None"
+    ATTR MhsPort_R "R:R:[7;0]:Output:External:Normal:None"
+    ATTR MhsPort_G "G:G:[7;0]:Output:External:Normal:None"
+    ATTR MhsPort_B "B:B:[7;0]:Output:External:Normal:None"
+    ATTR MhsPort_PIXEL_CLOCK "PIXEL_CLOCK:PIXEL_CLOCK:*:Output:External:Normal:None"
+    ATTR MhsPort_H_SYNC_Z "H_SYNC_Z:H_SYNC_Z:*:Output:External:Normal:None"
+    ATTR MhsPort_V_SYNC_Z "V_SYNC_Z:V_SYNC_Z:*:Output:External:Normal:None"
+    ATTR MhsPort_BLANK_Z "BLANK_Z:BLANK_Z:*:Output:External:Normal:None"
+    ATTR MhsPort_COMP_SYNC "COMP_SYNC:COMP_SYNC:*:Output:External:Normal:None"
+    ATTR MhsPort_RESET_VDEC1_Z "RESET_VDEC1_Z:RESET_VDEC1_Z:*:Output:External:Normal:None"
+    ATTR MhsPort_VDEC1_OE_Z "VDEC1_OE_Z:VDEC1_OE_Z:*:Output:External:Normal:None"
+    ATTR MhsPort_VDEC1_PWRDN_Z "VDEC1_PWRDN_Z:VDEC1_PWRDN_Z:*:Output:External:Normal:None"
+    ATTR MhsPort_vid_dec_reset_in "vid_dec_reset_in:vid_dec_reset_in:*:Input:External:Normal:None"
+    BEGIN NETLIST
+        BEGIN SIGNAL "jtagppc_0_0"
+            ATTR IsBusIf "true"
+            ATTR MpdName "Transparent"
+            ATTR MpdHwVersion "1.00.a"
+        END SIGNAL
+        BEGIN SIGNAL "plb"
+            ATTR IsBusIf "true"
+            ATTR MpdName "plb_v34"
+            ATTR MpdHwVersion "1.02.a"
+        END SIGNAL
+        BEGIN SIGNAL "jtagppc_0_1"
+            ATTR IsBusIf "true"
+            ATTR MpdName "Transparent"
+            ATTR MpdHwVersion "1.00.a"
+        END SIGNAL
+        BEGIN SIGNAL "opb"
+            ATTR IsBusIf "true"
+            ATTR MpdName "opb_v20"
+            ATTR MpdHwVersion "1.10.c"
+            ATTR C_EXT_RESET_HIGH "1"
+            ATTR MhsPort_SYS_Rst "SYS_Rst:sys_bus_reset:*:Input:Internal:Normal:None"
+            ATTR MhsPort_OPB_Clk "OPB_Clk:sys_clk_s:*:Input:Internal:Normal:None"
+            ATTR MhsPort_OPB_Rst "OPB_Rst:OPB_Rst:*:Input:Internal:Normal:None"
+        END SIGNAL
+        BEGIN SIGNAL "plb_bram_if_cntlr_1_port"
+            ATTR IsBusIf "true"
+            ATTR MpdName "Transparent"
+            ATTR MpdHwVersion "1.00.a"
+        END SIGNAL
+        BEGIN SIGNAL "dcm_clk_s"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "sys_rst_s"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_RS232_Uart_1_RX"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_RS232_Uart_1_TX"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_CLK"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_MPA"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_MPD"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_CEN"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_OEN"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_WEN"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "LLC_CLOCK"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "Sda_decoder"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "Scl_decoder"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "YCrCb_in"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "R"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "G"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "B"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "PIXEL_CLOCK"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "H_SYNC_Z"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "V_SYNC_Z"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "BLANK_Z"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "COMP_SYNC"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "RESET_VDEC1_Z"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "VDEC1_OE_Z"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "VDEC1_PWRDN_Z"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "vid_dec_reset_in"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "sys_clk_s"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "C405RSTCHIPRESETREQ"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "C405RSTCORERESETREQ"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "C405RSTSYSRESETREQ"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "RSTC405RESETCHIP"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "RSTC405RESETCORE"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "RSTC405RESETSYS"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "sys_bus_reset"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "dcm_0_lock"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "OPB_Rst"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "net_gnd"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "i2c_rst"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "gpo_data"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "i2c_rst_i"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "vid_dec_rst_i"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "vid_dec_reset_in & vid_dec_rst_i"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "vid_dec_rst"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        BEGIN SIGNAL "OPB_Rst & i2c_rst_i"
+            ATTR IsBusIf "false"
+        END SIGNAL
+        PORT Input "dcm_clk_s"
+        PORT Input "sys_rst_s"
+        PORT Input "fpga_0_RS232_Uart_1_RX"
+        PORT Output "fpga_0_RS232_Uart_1_TX"
+        PORT Input "fpga_0_SysACE_CompactFlash_SysACE_CLK"
+        PORT Output "fpga_0_SysACE_CompactFlash_SysACE_MPA"
+        PORT BiDirectional "fpga_0_SysACE_CompactFlash_SysACE_MPD"
+        PORT Output "fpga_0_SysACE_CompactFlash_SysACE_CEN"
+        PORT Output "fpga_0_SysACE_CompactFlash_SysACE_OEN"
+        PORT Output "fpga_0_SysACE_CompactFlash_SysACE_WEN"
+        PORT Input "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ"
+        PORT Input "LLC_CLOCK"
+        PORT BiDirectional "Sda_decoder"
+        PORT BiDirectional "Scl_decoder"
+        PORT Input "YCrCb_in"
+        PORT Output "R"
+        PORT Output "G"
+        PORT Output "B"
+        PORT Output "PIXEL_CLOCK"
+        PORT Output "H_SYNC_Z"
+        PORT Output "V_SYNC_Z"
+        PORT Output "BLANK_Z"
+        PORT Output "COMP_SYNC"
+        PORT Output "RESET_VDEC1_Z"
+        PORT Output "VDEC1_OE_Z"
+        PORT Output "VDEC1_PWRDN_Z"
+        PORT Input "vid_dec_reset_in"
+        BEGIN BLOCKDEF ppc405_0
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 320 
+            LINE N 0 32 32 32 
+            LINE N 0 64 32 64 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+            LINE N 128 128 96 128 
+            LINE N 128 160 96 160 
+            LINE N 128 192 96 192 
+            LINE N 128 224 96 224 
+            LINE N 128 256 96 256 
+            LINE N 128 288 96 288 
+        END BLOCKDEF
+        BEGIN BLOCKDEF ppc405_1
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 64 
+            LINE N 0 32 32 32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF RS232_Uart_1
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 96 
+            LINE N 0 32 32 32 
+            LINE N 0 64 32 64 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF SysACE_CompactFlash
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 224 
+            LINE N 0 32 32 32 
+            LINE N 0 64 32 64 
+            LINE N 0 96 32 96 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+            LINE N 128 128 96 128 
+            LINE N 128 160 96 160 
+            LINE N 128 192 96 192 
+        END BLOCKDEF
+        BEGIN BLOCKDEF plb_bram_if_cntlr_1
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 96 
+            LINE N 0 32 32 32 
+            LINE N 0 64 32 64 
+            LINE N 128 32 96 32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF dcm_0
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 160 
+            LINE N 0 32 32 32 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+            LINE N 128 128 96 128 
+        END BLOCKDEF
+        BEGIN BLOCKDEF i2c
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 224 
+            LINE N 0 32 32 32 
+            LINE N 128 32 96 32 
+            LINE N 128 96 96 96 
+            LINE N 128 128 96 128 
+            LINE N 128 160 96 160 
+            LINE N 128 192 96 192 
+        END BLOCKDEF
+        BEGIN BLOCKDEF and_gate_0
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 96 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF i2c_rst_or
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 96 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF jtagppc_0
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 96 
+            LINE N 0 32 32 32 
+            LINE N 0 64 32 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF reset_block
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 320 
+            LINE N 0 32 32 32 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+            LINE N 128 128 96 128 
+            LINE N 128 160 96 160 
+            LINE N 128 192 96 192 
+            LINE N 128 224 96 224 
+            LINE N 128 256 96 256 
+            LINE N 128 288 96 288 
+        END BLOCKDEF
+        BEGIN BLOCKDEF plb_bram_if_cntlr_1_bram
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 64 
+            LINE N 0 32 32 32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF video_capture_0
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 416 
+            LINE N 0 32 32 32 
+            LINE N 0 64 32 64 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+            LINE N 128 128 96 128 
+            LINE N 128 160 96 160 
+            LINE N 128 192 96 192 
+            LINE N 128 224 96 224 
+            LINE N 128 256 96 256 
+            LINE N 128 288 96 288 
+            LINE N 128 320 96 320 
+            LINE N 128 352 96 352 
+            LINE N 128 384 96 384 
+        END BLOCKDEF
+        BEGIN BLOCKDEF reset_split
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 128 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+        END BLOCKDEF
+        BEGIN BLOCKDEF plb
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 96 
+            LINE N 0 32 32 32 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF plb2opb
+            TIMESTAMP 2005 9 18 9 24 15
+            RECTANGLE N 32 0 96 128 
+            LINE N 0 32 32 32 
+            LINE N 128 32 96 32 
+            LINE N 128 64 96 64 
+            LINE N 128 96 96 96 
+        END BLOCKDEF
+        BEGIN BLOCK ppc405_0 ppc405_0
+            ATTR MpdName "ppc405"
+            ATTR MpdHwVersion "2.00.c"
+            ATTR MpdSymbolInstructions "W64:H64:L=DPLB,IPLB:T:R=JTAGPPC,PLBCLK,C405RSTCHIPRESETREQ,C405RSTCORERESETREQ,C405RSTSYSRESETREQ,RSTC405RESETCHIP,RSTC405RESETCORE,RSTC405RESETSYS,CPMC405CLOCK:B"
+            PIN DPLB "plb"
+            PIN IPLB "plb"
+            PIN JTAGPPC "jtagppc_0_0"
+            PIN PLBCLK "sys_clk_s"
+            PIN C405RSTCHIPRESETREQ "C405RSTCHIPRESETREQ"
+            PIN C405RSTCORERESETREQ "C405RSTCORERESETREQ"
+            PIN C405RSTSYSRESETREQ "C405RSTSYSRESETREQ"
+            PIN RSTC405RESETCHIP "RSTC405RESETCHIP"
+            PIN RSTC405RESETCORE "RSTC405RESETCORE"
+            PIN RSTC405RESETSYS "RSTC405RESETSYS"
+            PIN CPMC405CLOCK "sys_clk_s"
+        END BLOCK
+        BEGIN BLOCK ppc405_1 ppc405_1
+            ATTR MpdName "ppc405"
+            ATTR MpdHwVersion "2.00.c"
+            ATTR MpdSymbolInstructions "W64:H64:L=JTAGPPC:T:R:B"
+            PIN JTAGPPC "jtagppc_0_1"
+        END BLOCK
+        BEGIN BLOCK plb2opb plb2opb
+            ATTR MpdName "plb2opb_bridge"
+            ATTR MpdHwVersion "1.01.a"
+            ATTR C_DCR_INTFCE "0"
+            ATTR C_NUM_ADDR_RNG "1"
+            ATTR C_RNG0_BASEADDR "0x00000000"
+            ATTR C_RNG0_HIGHADDR "0x7fffffff"
+            ATTR MpdSymbolInstructions "W64:H64:L=SPLB:T:R=MOPB,PLB_Clk,OPB_Clk:B"
+            PIN SPLB "plb"
+            PIN MOPB "opb"
+            PIN PLB_Clk "sys_clk_s"
+            PIN OPB_Clk "sys_clk_s"
+        END BLOCK
+        BEGIN BLOCK RS232_Uart_1 RS232_Uart_1
+            ATTR MpdName "opb_uartlite"
+            ATTR MpdHwVersion "1.00.b"
+            ATTR C_BAUDRATE "9600"
+            ATTR C_DATA_BITS "8"
+            ATTR C_ODD_PARITY "0"
+            ATTR C_USE_PARITY "0"
+            ATTR C_CLK_FREQ "100000000"
+            ATTR C_BASEADDR "0x40600000"
+            ATTR C_HIGHADDR "0x4060ffff"
+            ATTR MpdSymbolInstructions "W64:H64:L=SOPB,RX:T:R=OPB_Clk,TX:B"
+            PIN SOPB "opb"
+            PIN RX "fpga_0_RS232_Uart_1_RX"
+            PIN OPB_Clk "sys_clk_s"
+            PIN TX "fpga_0_RS232_Uart_1_TX"
+        END BLOCK
+        BEGIN BLOCK SysACE_CompactFlash SysACE_CompactFlash
+            ATTR MpdName "opb_sysace"
+            ATTR MpdHwVersion "1.00.b"
+            ATTR C_MEM_WIDTH "16"
+            ATTR C_BASEADDR "0x41800000"
+            ATTR C_HIGHADDR "0x4180ffff"
+            ATTR MpdSymbolInstructions "W64:H64:L=SOPB,SysACE_CLK,SysACE_MPIRQ:T:R=OPB_Clk,SysACE_MPA,SysACE_MPD,SysACE_CEN,SysACE_OEN,SysACE_WEN:B"
+            PIN SOPB "opb"
+            PIN SysACE_CLK "fpga_0_SysACE_CompactFlash_SysACE_CLK"
+            PIN SysACE_MPIRQ "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ"
+            PIN OPB_Clk "sys_clk_s"
+            PIN SysACE_MPA "fpga_0_SysACE_CompactFlash_SysACE_MPA"
+            PIN SysACE_MPD "fpga_0_SysACE_CompactFlash_SysACE_MPD"
+            PIN SysACE_CEN "fpga_0_SysACE_CompactFlash_SysACE_CEN"
+            PIN SysACE_OEN "fpga_0_SysACE_CompactFlash_SysACE_OEN"
+            PIN SysACE_WEN "fpga_0_SysACE_CompactFlash_SysACE_WEN"
+        END BLOCK
+        BEGIN BLOCK plb_bram_if_cntlr_1 plb_bram_if_cntlr_1
+            ATTR MpdName "plb_bram_if_cntlr"
+            ATTR MpdHwVersion "1.00.b"
+            ATTR c_plb_clk_period_ps "10000"
+            ATTR c_baseaddr "0xffff0000"
+            ATTR c_highaddr "0xffffffff"
+            ATTR MpdSymbolInstructions "W64:H64:L=PORTA,SPLB:T:R=PLB_Clk:B"
+            PIN PORTA "plb_bram_if_cntlr_1_port"
+            PIN SPLB "plb"
+            PIN PLB_Clk "sys_clk_s"
+        END BLOCK
+        BEGIN BLOCK dcm_0 dcm_0
+            ATTR MpdName "dcm_module"
+            ATTR MpdHwVersion "1.00.a"
+            ATTR C_CLK0_BUF "TRUE"
+            ATTR C_CLKIN_PERIOD "10.000000"
+            ATTR C_CLK_FEEDBACK "1X"
+            ATTR C_EXT_RESET_HIGH "1"
+            ATTR MpdSymbolInstructions "W64:H64:L=CLKIN:T:R=CLK0,CLKFB,RST,LOCKED:B"
+            PIN CLKIN "dcm_clk_s"
+            PIN CLK0 "sys_clk_s"
+            PIN CLKFB "sys_clk_s"
+            PIN RST "net_gnd"
+            PIN LOCKED "dcm_0_lock"
+        END BLOCK
+        BEGIN BLOCK i2c i2c
+            ATTR MpdName "opb_iic"
+            ATTR MpdHwVersion "1.01.d"
+            ATTR C_BASEADDR "0x40700000"
+            ATTR C_HIGHADDR "0x407001ff"
+            ATTR C_IIC_FREQ "10000"
+            ATTR C_GPO_WIDTH "2"
+            ATTR MhsPort_OPB_Rst "OPB_Rst:i2c_rst:*:Input:Internal:Normal:None"
+            ATTR MpdSymbolInstructions "W64:H64:L=SOPB:T:R=OPB_Clk,OPB_Rst,Freeze,Scl,Sda,Gpo:B"
+            PIN SOPB "opb"
+            PIN OPB_Clk "sys_clk_s"
+            PIN Freeze "net_gnd"
+            PIN Scl "Scl_decoder"
+            PIN Sda "Sda_decoder"
+            PIN Gpo "gpo_data"
+        END BLOCK
+        BEGIN BLOCK and_gate_0 and_gate_0
+            ATTR MpdName "util_reduced_logic"
+            ATTR MpdHwVersion "1.00.a"
+            ATTR C_OPERATION "and"
+            ATTR C_SIZE "2"
+            ATTR MpdSymbolInstructions "W64:H64:L:T:R=Op1,Res:B"
+            PIN Op1 "vid_dec_reset_in & vid_dec_rst_i"
+            PIN Res "vid_dec_rst"
+        END BLOCK
+        BEGIN BLOCK i2c_rst_or i2c_rst_or
+            ATTR MpdName "util_reduced_logic"
+            ATTR MpdHwVersion "1.00.a"
+            ATTR C_OPERATION "or"
+            ATTR C_SIZE "2"
+            ATTR MpdSymbolInstructions "W64:H64:L:T:R=Op1,Res:B"
+            PIN Op1 "OPB_Rst & i2c_rst_i"
+            PIN Res "i2c_rst"
+        END BLOCK
+        BEGIN BLOCK plb plb
+            ATTR MpdName "plb_v34"
+            ATTR MpdHwVersion "1.02.a"
+            ATTR C_DCR_INTFCE "0"
+            ATTR C_EXT_RESET_HIGH "1"
+            ATTR MpdSymbolInstructions "W64:H64:L=plb_v34:T:R=SYS_Rst,PLB_Clk:B"
+            PIN plb_v34 "plb"
+            PIN SYS_Rst "sys_bus_reset"
+            PIN PLB_Clk "sys_clk_s"
+        END BLOCK
+        BEGIN BLOCK jtagppc_0 jtagppc_0
+            ATTR MpdName "jtagppc_cntlr"
+            ATTR MpdHwVersion "2.00.a"
+            ATTR MpdSymbolInstructions "W64:H64:L=JTAGPPC0,JTAGPPC1:T:R:B"
+            PIN JTAGPPC0 "jtagppc_0_0"
+            PIN JTAGPPC1 "jtagppc_0_1"
+        END BLOCK
+        BEGIN BLOCK reset_block reset_block
+            ATTR MpdName "proc_sys_reset"
+            ATTR MpdHwVersion "1.00.a"
+            ATTR C_EXT_RESET_HIGH "0"
+            ATTR MpdSymbolInstructions "W64:H64:L=Ext_Reset_In:T:R=Slowest_sync_clk,Chip_Reset_Req,Core_Reset_Req,System_Reset_Req,Rstc405resetchip,Rstc405resetcore,Rstc405resetsys,Bus_Struct_Reset,Dcm_locked:B"
+            PIN Ext_Reset_In "sys_rst_s"
+            PIN Slowest_sync_clk "sys_clk_s"
+            PIN Chip_Reset_Req "C405RSTCHIPRESETREQ"
+            PIN Core_Reset_Req "C405RSTCORERESETREQ"
+            PIN System_Reset_Req "C405RSTSYSRESETREQ"
+            PIN Rstc405resetchip "RSTC405RESETCHIP"
+            PIN Rstc405resetcore "RSTC405RESETCORE"
+            PIN Rstc405resetsys "RSTC405RESETSYS"
+            PIN Bus_Struct_Reset "sys_bus_reset"
+            PIN Dcm_locked "dcm_0_lock"
+        END BLOCK
+        BEGIN BLOCK plb_bram_if_cntlr_1_bram plb_bram_if_cntlr_1_bram
+            ATTR MpdName "bram_block"
+            ATTR MpdHwVersion "1.00.a"
+            ATTR MpdSymbolInstructions "W64:H64:L=PORTA:T:R:B"
+            PIN PORTA "plb_bram_if_cntlr_1_port"
+        END BLOCK
+        BEGIN BLOCK video_capture_0 video_capture_0
+            ATTR MpdName "video_capture"
+            ATTR MpdHwVersion "1.01.b"
+            ATTR MpdSymbolInstructions "W64:H64:L=YCrCb_in,LLC_CLOCK:T:R=R,G,B,PIXEL_CLOCK,H_SYNC_Z,V_SYNC_Z,BLANK_Z,COMP_SYNC,RESET_VDEC1_Z,VDEC1_OE_Z,VDEC1_PWRDN_Z,system_dcm_locked:B"
+            PIN YCrCb_in "YCrCb_in"
+            PIN LLC_CLOCK "LLC_CLOCK"
+            PIN R "R"
+            PIN G "G"
+            PIN B "B"
+            PIN PIXEL_CLOCK "PIXEL_CLOCK"
+            PIN H_SYNC_Z "H_SYNC_Z"
+            PIN V_SYNC_Z "V_SYNC_Z"
+            PIN BLANK_Z "BLANK_Z"
+            PIN COMP_SYNC "COMP_SYNC"
+            PIN RESET_VDEC1_Z "RESET_VDEC1_Z"
+            PIN VDEC1_OE_Z "VDEC1_OE_Z"
+            PIN VDEC1_PWRDN_Z "VDEC1_PWRDN_Z"
+            PIN system_dcm_locked "dcm_0_lock"
+        END BLOCK
+        BEGIN BLOCK reset_split reset_split
+            ATTR MpdName "util_bus_split"
+            ATTR MpdHwVersion "1.00.a"
+            ATTR C_SIZE_IN "2"
+            ATTR C_LEFT_POS "0"
+            ATTR C_SPLIT "1"
+            ATTR MpdSymbolInstructions "W64:H64:L:T:R=Sig,Out1,Out2:B"
+            PIN Sig "gpo_data"
+            PIN Out1 "i2c_rst_i"
+            PIN Out2 "vid_dec_rst_i"
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 8458 4624
+        BEGIN BRANCH "jtagppc_0_0"
+            WIRE 1472 928 1504 928
+            WIRE 1504 928 1504 2656
+            WIRE 1504 2656 1504 3712
+            WIRE 1504 2656 1728 2656
+            WIRE 1504 384 1504 928
+            BEGIN DISPLAY 1504 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 1504 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "plb"
+            WIRE 1312 384 1312 800
+            WIRE 1312 800 1312 928
+            WIRE 1312 928 1344 928
+            WIRE 1312 928 1312 960
+            WIRE 1312 960 1344 960
+            WIRE 1312 960 1312 1536
+            WIRE 1312 1536 1344 1536
+            WIRE 1312 1536 1312 2112
+            WIRE 1312 2112 1312 3712
+            WIRE 1312 2112 2112 2112
+            WIRE 1312 800 2112 800
+            BEGIN DISPLAY 1312 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 1312 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "jtagppc_0_1"
+            WIRE 1696 384 1696 1280
+            WIRE 1696 1280 1728 1280
+            WIRE 1696 1280 1696 2688
+            WIRE 1696 2688 1696 3712
+            WIRE 1696 2688 1728 2688
+            BEGIN DISPLAY 1696 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 1696 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "opb"
+            WIRE 1472 1536 1888 1536
+            WIRE 1888 1536 1888 1696
+            WIRE 1888 1696 1920 1696
+            WIRE 1888 1696 1888 1824
+            WIRE 1888 1824 1888 3712
+            WIRE 1888 1824 1920 1824
+            WIRE 1888 384 1888 1280
+            WIRE 1888 1280 1888 1536
+            WIRE 1888 1280 1920 1280
+            BEGIN DISPLAY 1888 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 1888 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "plb_bram_if_cntlr_1_port"
+            WIRE 2080 384 2080 2080
+            WIRE 2080 2080 2112 2080
+            WIRE 2080 2080 2080 2656
+            WIRE 2080 2656 2080 3712
+            WIRE 2080 2656 2112 2656
+            BEGIN DISPLAY 2080 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 2080 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "dcm_clk_s"
+            WIRE 736 384 800 384
+            WIRE 800 384 800 2208
+            WIRE 800 2208 800 3712
+            WIRE 800 2208 2112 2208
+            BEGIN DISPLAY 800 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 384 "dcm_clk_s" R180 28
+        BEGIN BRANCH "sys_rst_s"
+            WIRE 736 336 864 336
+            WIRE 864 336 864 384
+            WIRE 864 384 864 2784
+            WIRE 864 2784 864 3712
+            WIRE 864 2784 2112 2784
+            BEGIN DISPLAY 864 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 336 "sys_rst_s" R180 28
+        BEGIN BRANCH "fpga_0_RS232_Uart_1_RX"
+            WIRE 736 288 928 288
+            WIRE 928 288 928 384
+            WIRE 928 384 928 1728
+            WIRE 928 1728 928 3712
+            WIRE 928 1728 1920 1728
+            BEGIN DISPLAY 928 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 288 "fpga_0_RS232_Uart_1_RX" R180 28
+        BEGIN BRANCH "fpga_0_RS232_Uart_1_TX"
+            WIRE 2048 1728 6304 1728
+            WIRE 6304 1728 6304 3712
+            WIRE 6304 3712 6304 4576
+            WIRE 6304 4576 7584 4576
+            WIRE 6304 384 6304 1728
+            BEGIN DISPLAY 6304 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4576 "fpga_0_RS232_Uart_1_TX" R0 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_CLK"
+            WIRE 736 240 992 240
+            WIRE 992 240 992 384
+            WIRE 992 384 992 1856
+            WIRE 992 1856 992 3712
+            WIRE 992 1856 1920 1856
+            BEGIN DISPLAY 992 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 240 "fpga_0_SysACE_CompactFlash_SysACE_CLK" R180 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_MPA"
+            WIRE 2048 1856 6368 1856
+            WIRE 6368 1856 6368 3712
+            WIRE 6368 3712 6368 4528
+            WIRE 6368 4528 7584 4528
+            WIRE 6368 384 6368 1856
+            BEGIN DISPLAY 6368 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4528 "fpga_0_SysACE_CompactFlash_SysACE_MPA" R0 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_MPD"
+            WIRE 2048 1888 6432 1888
+            WIRE 6432 1888 6432 3712
+            WIRE 6432 3712 6432 4480
+            WIRE 6432 4480 7584 4480
+            WIRE 6432 384 6432 1888
+            BEGIN DISPLAY 6432 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4480 "fpga_0_SysACE_CompactFlash_SysACE_MPD" R0 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_CEN"
+            WIRE 2048 1920 6496 1920
+            WIRE 6496 1920 6496 3712
+            WIRE 6496 3712 6496 4432
+            WIRE 6496 4432 7584 4432
+            WIRE 6496 384 6496 1920
+            BEGIN DISPLAY 6496 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4432 "fpga_0_SysACE_CompactFlash_SysACE_CEN" R0 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_OEN"
+            WIRE 2048 1952 6560 1952
+            WIRE 6560 1952 6560 3712
+            WIRE 6560 3712 6560 4384
+            WIRE 6560 4384 7584 4384
+            WIRE 6560 384 6560 1952
+            BEGIN DISPLAY 6560 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4384 "fpga_0_SysACE_CompactFlash_SysACE_OEN" R0 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_WEN"
+            WIRE 2048 1984 6624 1984
+            WIRE 6624 1984 6624 3712
+            WIRE 6624 3712 6624 4336
+            WIRE 6624 4336 7584 4336
+            WIRE 6624 384 6624 1984
+            BEGIN DISPLAY 6624 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4336 "fpga_0_SysACE_CompactFlash_SysACE_WEN" R0 28
+        BEGIN BRANCH "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ"
+            WIRE 736 192 1056 192
+            WIRE 1056 192 1056 384
+            WIRE 1056 384 1056 1888
+            WIRE 1056 1888 1056 3712
+            WIRE 1056 1888 1920 1888
+            BEGIN DISPLAY 1056 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 192 "fpga_0_SysACE_CompactFlash_SysACE_MPIRQ" R180 28
+        BEGIN BRANCH "LLC_CLOCK"
+            WIRE 736 144 1120 144
+            WIRE 1120 144 1120 384
+            WIRE 1120 384 1120 3168
+            WIRE 1120 3168 1120 3712
+            WIRE 1120 3168 2112 3168
+            BEGIN DISPLAY 1120 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 144 "LLC_CLOCK" R180 28
+        BEGIN BRANCH "Sda_decoder"
+            WIRE 2048 1408 6688 1408
+            WIRE 6688 1408 6688 3712
+            WIRE 6688 3712 6688 4288
+            WIRE 6688 4288 7584 4288
+            WIRE 6688 384 6688 1408
+            BEGIN DISPLAY 6688 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4288 "Sda_decoder" R0 28
+        BEGIN BRANCH "Scl_decoder"
+            WIRE 2048 1376 6752 1376
+            WIRE 6752 1376 6752 3712
+            WIRE 6752 3712 6752 4240
+            WIRE 6752 4240 7584 4240
+            WIRE 6752 384 6752 1376
+            BEGIN DISPLAY 6752 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4240 "Scl_decoder" R0 28
+        BEGIN BRANCH "YCrCb_in"
+            WIRE 736 96 1184 96
+            WIRE 1184 96 1184 384
+            WIRE 1184 384 1184 3136
+            WIRE 1184 3136 1184 3712
+            WIRE 1184 3136 2112 3136
+            BEGIN DISPLAY 1184 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 96 "YCrCb_in" R180 28
+        BEGIN BRANCH "R"
+            WIRE 2240 3136 6816 3136
+            WIRE 6816 3136 6816 3712
+            WIRE 6816 3712 6816 4192
+            WIRE 6816 4192 7584 4192
+            WIRE 6816 384 6816 3136
+            BEGIN DISPLAY 6816 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4192 "R" R0 28
+        BEGIN BRANCH "G"
+            WIRE 2240 3168 6880 3168
+            WIRE 6880 3168 6880 3712
+            WIRE 6880 3712 6880 4144
+            WIRE 6880 4144 7584 4144
+            WIRE 6880 384 6880 3168
+            BEGIN DISPLAY 6880 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4144 "G" R0 28
+        BEGIN BRANCH "B"
+            WIRE 2240 3200 6944 3200
+            WIRE 6944 3200 6944 3712
+            WIRE 6944 3712 6944 4096
+            WIRE 6944 4096 7584 4096
+            WIRE 6944 384 6944 3200
+            BEGIN DISPLAY 6944 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4096 "B" R0 28
+        BEGIN BRANCH "PIXEL_CLOCK"
+            WIRE 2240 3232 7008 3232
+            WIRE 7008 3232 7008 3712
+            WIRE 7008 3712 7008 4048
+            WIRE 7008 4048 7584 4048
+            WIRE 7008 384 7008 3232
+            BEGIN DISPLAY 7008 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4048 "PIXEL_CLOCK" R0 28
+        BEGIN BRANCH "H_SYNC_Z"
+            WIRE 2240 3264 7072 3264
+            WIRE 7072 3264 7072 3712
+            WIRE 7072 3712 7072 4000
+            WIRE 7072 4000 7584 4000
+            WIRE 7072 384 7072 3264
+            BEGIN DISPLAY 7072 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 4000 "H_SYNC_Z" R0 28
+        BEGIN BRANCH "V_SYNC_Z"
+            WIRE 2240 3296 7136 3296
+            WIRE 7136 3296 7136 3712
+            WIRE 7136 3712 7136 3952
+            WIRE 7136 3952 7584 3952
+            WIRE 7136 384 7136 3296
+            BEGIN DISPLAY 7136 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 3952 "V_SYNC_Z" R0 28
+        BEGIN BRANCH "BLANK_Z"
+            WIRE 2240 3328 7200 3328
+            WIRE 7200 3328 7200 3712
+            WIRE 7200 3712 7200 3904
+            WIRE 7200 3904 7584 3904
+            WIRE 7200 384 7200 3328
+            BEGIN DISPLAY 7200 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 3904 "BLANK_Z" R0 28
+        BEGIN BRANCH "COMP_SYNC"
+            WIRE 2240 3360 7264 3360
+            WIRE 7264 3360 7264 3712
+            WIRE 7264 3712 7264 3856
+            WIRE 7264 3856 7584 3856
+            WIRE 7264 384 7264 3360
+            BEGIN DISPLAY 7264 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 3856 "COMP_SYNC" R0 28
+        BEGIN BRANCH "RESET_VDEC1_Z"
+            WIRE 2240 3392 7328 3392
+            WIRE 7328 3392 7328 3712
+            WIRE 7328 3712 7328 3808
+            WIRE 7328 3808 7584 3808
+            WIRE 7328 384 7328 3392
+            BEGIN DISPLAY 7328 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 3808 "RESET_VDEC1_Z" R0 28
+        BEGIN BRANCH "VDEC1_OE_Z"
+            WIRE 2240 3424 7392 3424
+            WIRE 7392 3424 7392 3712
+            WIRE 7392 3712 7392 3760
+            WIRE 7392 3760 7584 3760
+            WIRE 7392 384 7392 3424
+            BEGIN DISPLAY 7392 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 3760 "VDEC1_OE_Z" R0 28
+        BEGIN BRANCH "VDEC1_PWRDN_Z"
+            WIRE 2240 3456 7456 3456
+            WIRE 7456 3456 7456 3712
+            WIRE 7456 3712 7584 3712
+            WIRE 7456 384 7456 3456
+            BEGIN DISPLAY 7456 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 7584 3712 "VDEC1_PWRDN_Z" R0 28
+        BEGIN BRANCH "vid_dec_reset_in"
+            WIRE 736 48 1248 48
+            WIRE 1248 48 1248 384
+            WIRE 1248 384 1248 3712
+            BEGIN DISPLAY 1248 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 736 48 "vid_dec_reset_in" R180 28
+        BEGIN BRANCH "sys_clk_s"
+            WIRE 1472 960 2272 960
+            WIRE 2272 960 2272 1184
+            WIRE 2272 1184 2272 1280
+            WIRE 2272 1280 2272 1568
+            WIRE 2272 1568 2272 1600
+            WIRE 2272 1600 2272 1696
+            WIRE 2272 1696 2272 1824
+            WIRE 2272 1824 2272 2080
+            WIRE 2272 2080 2272 2208
+            WIRE 2272 2208 2272 2240
+            WIRE 2272 2240 2272 2784
+            WIRE 2272 2784 2272 3712
+            WIRE 1472 1184 2272 1184
+            WIRE 1472 1568 2272 1568
+            WIRE 1472 1600 2272 1600
+            WIRE 2048 1280 2272 1280
+            WIRE 2048 1696 2272 1696
+            WIRE 2048 1824 2272 1824
+            WIRE 2240 832 2272 832
+            WIRE 2272 832 2272 960
+            WIRE 2240 2080 2272 2080
+            WIRE 2240 2208 2272 2208
+            WIRE 2240 2240 2272 2240
+            WIRE 2240 2784 2272 2784
+            WIRE 2272 384 2272 832
+            BEGIN DISPLAY 2272 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 2272 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "C405RSTCHIPRESETREQ"
+            WIRE 1472 992 2496 992
+            WIRE 2496 992 2496 2816
+            WIRE 2496 2816 2496 3712
+            WIRE 2240 2816 2496 2816
+            WIRE 2496 384 2496 992
+            BEGIN DISPLAY 2496 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 2496 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "C405RSTCORERESETREQ"
+            WIRE 1472 1024 2720 1024
+            WIRE 2720 1024 2720 2848
+            WIRE 2720 2848 2720 3712
+            WIRE 2240 2848 2720 2848
+            WIRE 2720 384 2720 1024
+            BEGIN DISPLAY 2720 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 2720 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "C405RSTSYSRESETREQ"
+            WIRE 1472 1056 2944 1056
+            WIRE 2944 1056 2944 2880
+            WIRE 2944 2880 2944 3712
+            WIRE 2240 2880 2944 2880
+            WIRE 2944 384 2944 1056
+            BEGIN DISPLAY 2944 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 2944 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "RSTC405RESETCHIP"
+            WIRE 1472 1088 3168 1088
+            WIRE 3168 1088 3168 2912
+            WIRE 3168 2912 3168 3712
+            WIRE 2240 2912 3168 2912
+            WIRE 3168 384 3168 1088
+            BEGIN DISPLAY 3168 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 3168 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "RSTC405RESETCORE"
+            WIRE 1472 1120 3392 1120
+            WIRE 3392 1120 3392 2944
+            WIRE 3392 2944 3392 3712
+            WIRE 2240 2944 3392 2944
+            WIRE 3392 384 3392 1120
+            BEGIN DISPLAY 3392 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 3392 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "RSTC405RESETSYS"
+            WIRE 1472 1152 3616 1152
+            WIRE 3616 1152 3616 2976
+            WIRE 3616 2976 3616 3712
+            WIRE 2240 2976 3616 2976
+            WIRE 3616 384 3616 1152
+            BEGIN DISPLAY 3616 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 3616 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "sys_bus_reset"
+            WIRE 2240 800 3840 800
+            WIRE 3840 800 3840 3008
+            WIRE 3840 3008 3840 3712
+            WIRE 2240 3008 3840 3008
+            WIRE 3840 384 3840 800
+            BEGIN DISPLAY 3840 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 3840 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "dcm_0_lock"
+            WIRE 2240 2304 4064 2304
+            WIRE 4064 2304 4064 3040
+            WIRE 4064 3040 4064 3488
+            WIRE 4064 3488 4064 3712
+            WIRE 2240 3040 4064 3040
+            WIRE 2240 3488 4064 3488
+            WIRE 4064 384 4064 2304
+            BEGIN DISPLAY 4064 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 4064 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "OPB_Rst"
+            WIRE 4288 384 4288 3712
+            BEGIN DISPLAY 4288 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 4288 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "net_gnd"
+            WIRE 2048 1344 4512 1344
+            WIRE 4512 1344 4512 2272
+            WIRE 4512 2272 4512 3712
+            WIRE 2240 2272 4512 2272
+            WIRE 4512 384 4512 1344
+            BEGIN DISPLAY 4512 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 4512 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "i2c_rst"
+            WIRE 2240 2560 4736 2560
+            WIRE 4736 2560 4736 3712
+            WIRE 4736 384 4736 2560
+            BEGIN DISPLAY 4736 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 4736 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "gpo_data"
+            WIRE 2048 1440 4960 1440
+            WIRE 4960 1440 4960 3584
+            WIRE 4960 3584 4960 3712
+            WIRE 2240 3584 4960 3584
+            WIRE 4960 384 4960 1440
+            BEGIN DISPLAY 4960 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 4960 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "i2c_rst_i"
+            WIRE 2240 3616 5184 3616
+            WIRE 5184 3616 5184 3712
+            WIRE 5184 384 5184 3616
+            BEGIN DISPLAY 5184 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 5184 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "vid_dec_rst_i"
+            WIRE 2240 3648 5408 3648
+            WIRE 5408 3648 5408 3712
+            WIRE 5408 384 5408 3648
+            BEGIN DISPLAY 5408 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 5408 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "vid_dec_reset_in & vid_dec_rst_i"
+            WIRE 2240 2400 5632 2400
+            WIRE 5632 2400 5632 3712
+            WIRE 5632 384 5632 2400
+            BEGIN DISPLAY 5632 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 5632 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "vid_dec_rst"
+            WIRE 2240 2432 5856 2432
+            WIRE 5856 2432 5856 3712
+            WIRE 5856 384 5856 2432
+            BEGIN DISPLAY 5856 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 5856 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH "OPB_Rst & i2c_rst_i"
+            WIRE 2240 2528 6080 2528
+            WIRE 6080 2528 6080 3712
+            WIRE 6080 384 6080 2528
+            BEGIN DISPLAY 6080 384 ATTR Name
+                ALIGNMENT HARD-BCENTER
+            END DISPLAY
+            BEGIN DISPLAY 6080 3712 ATTR Name
+                ALIGNMENT HARD-TCENTER
+            END DISPLAY
+        END BRANCH
+        INSTANCE ppc405_0 1344 896 R0
+        INSTANCE ppc405_1 1728 1248 R0
+        INSTANCE plb2opb 1344 1504 R0
+        INSTANCE RS232_Uart_1 1920 1664 R0
+        INSTANCE SysACE_CompactFlash 1920 1792 R0
+        INSTANCE plb_bram_if_cntlr_1 2112 2048 R0
+        INSTANCE dcm_0 2112 2176 R0
+        INSTANCE i2c 1920 1248 R0
+        INSTANCE and_gate_0 2112 2368 R0
+        INSTANCE i2c_rst_or 2112 2496 R0
+        INSTANCE plb 2112 768 R0
+        INSTANCE jtagppc_0 1728 2624 R0
+        INSTANCE reset_block 2112 2752 R0
+        INSTANCE plb_bram_if_cntlr_1_bram 2112 2624 R0
+        INSTANCE video_capture_0 2112 3104 R0
+        INSTANCE reset_split 2112 3552 R0
+    END SHEET
+END SCHEMATIC

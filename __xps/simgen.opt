@@ -1,0 +1,1 @@
+ -p virtex2p -lang vhdl    -pe ppc405_0 xylophone_hero/executable.elf -s mti -X c:/BCJ/Git/Xylophone_Hero/ -E c:/BCJ/Git/Xylophone_Hero/

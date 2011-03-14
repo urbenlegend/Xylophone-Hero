@@ -1,0 +1,6 @@
+OpenProject(C:\xup\ref_design\video_capture_rev_1_1_roozbeh_final_r01_vhdl_grey_functional\projnav\system.ise)
+SetPreference(PathType, Absolute)
+AddSource(C:\xup\ref_design\video_capture_rev_1_1_roozbeh_final_r01_vhdl_grey_functional\implementation\system.ngc)
+SetProperty( Macro Search Path, C:\xup\ref_design\video_capture_rev_1_1_roozbeh_final_r01_vhdl_grey_functional\implementation, C:\xup\ref_design\video_capture_rev_1_1_roozbeh_final_r01_vhdl_grey_functional\implementation\system.ngc, Implement Design)
+AddSource(C:\xup\ref_design\video_capture_rev_1_1_roozbeh_final_r01_vhdl_grey_functional\implementation\system.bmm, system)
+CloseProject()

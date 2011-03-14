@@ -1,0 +1,54 @@
+#Please do not modify this file by hand
+XmpVersion: 9.1
+VerMgmt: 8.2
+IntStyle: default
+MHS File: system.mhs
+MSS File: system.mss
+NPL File: projnav/system.ise
+Architecture: virtex2p
+Device: xc2vp30
+Package: ff896
+SpeedGrade: -7
+UseProjNav: 0
+AddToNPL: 1
+PNImportBitFile: projnav/system.bit
+PNImportBmmFile: implementation/system_bd.bmm
+UserCmd1:
+UserCmd1Type: 0
+UserCmd2:
+UserCmd2Type: 0
+TopInst: video_capture_0
+InsertNoPads: 0
+HdlLang: VHDL
+Simulator: mti
+GenSimTB: 0
+SimModel: BEHAVIORAL
+MixLangSim: 1
+UcfFile: data/system.ucf
+Processor: ppc405_0
+BootLoop: 0
+XmdStub: 0
+Processor: ppc405_1
+BootLoop: 0
+XmdStub: 0
+SwProj: config_decoder_revb
+Processor: ppc405_0
+Executable: config_decoder_revb/executable.elf
+Source: config_decoder_revb/src/xi2c_l.c
+Source: config_decoder_revb/src/xup_config_decoder.c
+Source: config_decoder_revb/src/uart.c
+Header: config_decoder_revb/src/xi2c_l.h
+Header: config_decoder_revb/src/uart.h
+DefaultInit: executable
+InitBram: 1
+Active: 1
+CompilerOptLevel: 2
+GlobPtrOpt: 0
+DebugSym: 1
+ProgStart:
+StackSize: 
+HeapSize: 
+LinkerScript:
+ProgCCFlags: 
+CompileInXps: 1 
+NonXpsApp: 0 

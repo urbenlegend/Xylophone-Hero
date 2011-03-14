@@ -1,0 +1,40 @@
+
+bitinit version Xilinx EDK 9.2 Build EDK_Jm.16
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0x40000000-0x400001ff) white_color	plb->plb2opb->opb
+  (0x40000200-0x400003ff) black_color	plb->plb2opb->opb
+  (0x40000400-0x400005ff) white_count	plb->plb2opb->opb
+  (0x40000600-0x400007ff) black_count	plb->plb2opb->opb
+  (0x40000800-0x400009ff) calib	plb->plb2opb->opb
+  (0x40000a00-0x40000bff) BW	plb->plb2opb->opb
+  (0x40000c00-0x40000dff) clk_27	plb->plb2opb->opb
+  (0x40000e00-0x40000fff) frame	plb->plb2opb->opb
+  (0x40001000-0x400011ff) game_mode	plb->plb2opb->opb
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xfffe0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file xylophone_hero/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -bt "implementation/system.bit"  -bd
+"xylophone_hero/executable.elf" tag ppc405_0  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

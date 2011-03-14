@@ -1,0 +1,114 @@
+iMPACT Version: Apr 13 2007 14:36:18
+
+iMPACT log file Started on Sun Mar 13 19:30:30 2011
+
+Preference Table
+Name                 Setting             
+StartupClock         Auto_Correction     
+AutoSignature        False               
+KeepSVF              False               
+ConcurrentMode       False               
+UseHighz             False               
+ConfigOnFailure      Stop                
+UserLevel            Novice              
+MessageLevel         Detailed            
+svfUseTime           false               
+SpiByteSwap          Auto_Correction     
+AutoDetecting cable. Please wait.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.1.0. WinDriver v8.11 Jungo (c) 1997 - 2006 Build Date: Oct 16 2006 X86 32bit SYS12:35:07, version = 811.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.1.0. WinDriver v8.11 Jungo (c) 1997 - 2006 Build Date: Oct 16 2006 X86 32bit SYS12:35:07, version = 811.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.1.0. WinDriver v8.11 Jungo (c) 1997 - 2006 Build Date: Oct 16 2006 X86 32bit SYS12:35:07, version = 811.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 8.1.1.0. WinDriver v8.11 Jungo (c) 1997 - 2006 Build Date: Oct 16 2006 X86 32bit SYS12:35:07, version = 811.
+Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver version: 1027 (1027).
+ Driver windrvr6.sys version = 8.1.1.0. WinDriver v8.11 Jungo (c) 1997 - 2006 Build Date: Oct 16 2006 X86 32bit SYS12:35:07, version = 811.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1029.
+File version of c:/Xilinx92i/data/xusb_xlp.hex = 1301.
+Firmware hex file version = 1301.
+Downloading c:/Xilinx92i/data/xusb_xlp.hex.
+Downloaded firmware version = 1301.
+ESN Family Code: 01
+ESN: 0000140E4D1D
+CPLD file version = 0012h.
+CPLD version = 0012h.
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xc2vp30, Version : 1
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx92i/virtex2p/data/xc2vp30.bsd...
+INFO:iMPACT:501 - '1': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID =Xilinx xccace, Version : 0
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx92i/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '1': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'3': : Manufacturer's ID =Xilinx xcf32p, Version : 15
+INFO:iMPACT:1777 - 
+   Reading c:/Xilinx92i/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+'3': Loading file 'implementation/download.bit' ...
+done.
+INFO:iMPACT:501 - '3': Added Device xc2vp30 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'3': Programming device...
+done.
+'3': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         1
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1101 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '3': Completed downloading bit file to device.
+INFO:iMPACT - '3': Checking done pin....done.
+'3': Programmed successfully.
+Elapsed time =      3 sec.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------

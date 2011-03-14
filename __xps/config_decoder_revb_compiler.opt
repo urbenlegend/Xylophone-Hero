@@ -1,0 +1,20 @@
+ppc405_0
+CONFIG_DECODER_REVB_SOURCES = /cygdrive/c/BenChenJess/Xylophone_Hero/config_decoder_revb/src/xup_config_decoder.c /cygdrive/c/BenChenJess/Xylophone_Hero/config_decoder_revb/src/i2c_master.c /cygdrive/c/BenChenJess/Xylophone_Hero/config_decoder_revb/src/uart.c /cygdrive/c/BenChenJess/Xylophone_Hero/config_decoder_revb/src/xi2c_l.c 
+CONFIG_DECODER_REVB_HEADERS = /cygdrive/c//BenChenJess/Xylophone_Hero/config_decoder_revb/src/uart.h /cygdrive/c//BenChenJess/Xylophone_Hero/config_decoder_revb/src/xi2c_l.h 
+CONFIG_DECODER_REVB_CC = powerpc-eabi-gcc
+CONFIG_DECODER_REVB_CC_SIZE = powerpc-eabi-size
+CONFIG_DECODER_REVB_CC_OPT = -O2
+CONFIG_DECODER_REVB_CFLAGS = 
+CONFIG_DECODER_REVB_CC_SEARCH = # -B
+CONFIG_DECODER_REVB_LIBPATH = -L./ppc405_0/lib/ # -L
+CONFIG_DECODER_REVB_INCLUDES = -I./ppc405_0/include/  -Iconfig_decoder_revb/src/ # -I
+CONFIG_DECODER_REVB_LFLAGS = # -l
+CONFIG_DECODER_REVB_LINKER_SCRIPT = 
+CONFIG_DECODER_REVB_CC_DEBUG_FLAG =  -g 
+CONFIG_DECODER_REVB_CC_PROFILE_FLAG = # -pg
+CONFIG_DECODER_REVB_CC_GLOBPTR_FLAG= # -msdata=eabi
+CONFIG_DECODER_REVB_CC_INFERRED_FLAGS= 
+CONFIG_DECODER_REVB_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_START_ADDR=
+CONFIG_DECODER_REVB_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+CONFIG_DECODER_REVB_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(CONFIG_DECODER_REVB_CC_INFERRED_FLAGS)  \

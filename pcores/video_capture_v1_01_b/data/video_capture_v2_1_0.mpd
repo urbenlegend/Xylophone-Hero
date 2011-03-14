@@ -1,0 +1,35 @@
+BEGIN video_capture
+OPTION IPTYPE = IP
+OPTION STYLE = HDL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = vhdl
+OPTION USAGE_LEVEL = BASE_USER
+#OPTION CORE_STATE = DEVELOPMENT
+#OPTION ARCH_SUPPORT = DEVELOPMENT
+OPTION ARCH_SUPPORT_MAP = (virtex2p=DEVELOPMENT)
+
+PORT YCrCb_in           = "", DIR=IN, VEC=  [9:2]  
+PORT LLC_CLOCK          = "", DIR=IN, IOB_STATE=BUF  
+PORT R                  = "", DIR=OUT, VEC= [7:0]
+PORT G                  = "", DIR=OUT, VEC= [7:0]
+PORT B                  = "", DIR=OUT, VEC= [7:0]
+PORT PIXEL_CLOCK        = "", DIR=OUT, IOB_STATE=BUF  
+PORT H_SYNC_Z           = "", DIR=OUT 
+PORT V_SYNC_Z           = "", DIR=OUT 
+PORT BLANK_Z            = "", DIR=OUT 
+PORT COMP_SYNC          = "", DIR=OUT
+PORT RESET_VDEC1_Z      = "", DIR=OUT
+PORT VDEC1_OE_Z         = "", DIR=OUT        
+PORT VDEC1_PWRDN_Z      = "", DIR=OUT 
+PORT system_dcm_locked  = "", DIR=IN  
+PORT white_count_thresh = "", DIR=IN, VEC=  [9:0]
+PORT black_count_thresh = "", DIR=IN, VEC=  [9:0]
+PORT white_color_thresh = "", DIR=IN, VEC=  [7:0]
+PORT black_color_thresh = "", DIR=IN, VEC=  [7:0]
+PORT calibrate          = "", DIR=IN, VEC=  [3:0]
+PORT bw                 = "", DIR=IN,
+PORT frame              = "", DIR=OUT
+PORT clk_27_out         = "", DIR=OUT
+PORT game_mode          = "", DIR=IN
+PORT EXP_IO_44          = "", DIR=OUT
+END

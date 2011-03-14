@@ -1,0 +1,168 @@
+Release 9.2i - libgen Xilinx EDK 9.2
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -mhs C:/BenChenJess/video_capture_00/system.mhs -xmpdir
+C:/BenChenJess/video_capture_00 -p xc2vp30ff896-7 -pe ppc405_0 -od
+C:/BenChenJess/video_capture_00/SDK_projects/ppc405_0_sw_platform -log
+C:/BenChenJess/video_capture_00/SDK_projects/ppc405_0_sw_platform/libgen.log
+C:/BenChenJess/video_capture_00/SDK_projects/ppc405_0_sw_platform/system.mss 
+
+Output Directory (-od)		:
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\
+Part (-p)			: virtex2p
+
+Software Specification file	:
+C:/BenChenJess/video_capture_00/SDK_projects/ppc405_0_sw_platform/system.mss
+WARNING:MDT - IPNAME:proc_sys_reset INSTANCE:reset_block -
+   C:\BenChenJess\video_capture_00\system.mhs line 75 - deprecated core for
+   architecture 'virtex2p'!
+WARNING:MDT - Option "CORE_STATE" in
+   C:\BenChenJess\video_capture_00\pcores\video_capture_v1_01_b\data\video_captu
+   re_v2_1_0.mpd line 7  is deprecated. Please use Option ARCH_SUPPORT_MAP
+   instead. 
+
+Overriding IP level properties ...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0b0000010000-0b0000010011) ppc405_0	
+  (0b0000100000-0b0000100011) ppc405_0	
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+  (0b0000010000-0b0000010011) ppc405_1	
+  (0b0000100000-0b0000100011) ppc405_1	
+
+Check platform address map ...
+
+Overriding system level properties ...
+INFO:MDT - IPNAME:plb INSTANCE:plb_v34 -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 40 - tool is overriding PARAMETER C_PLB_NUM_MASTERS value to 2
+INFO:MDT - IPNAME:plb INSTANCE:plb_v34 -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 41 - tool is overriding PARAMETER C_PLB_NUM_SLAVES value to 2
+INFO:MDT - IPNAME:plb INSTANCE:plb_v34 -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd
+   line 42 - tool is overriding PARAMETER C_PLB_MID_WIDTH value to 1
+INFO:MDT - IPNAME:opb INSTANCE:opb_v20 -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 38 - tool is overriding PARAMETER C_NUM_MASTERS value to 1
+INFO:MDT - IPNAME:opb INSTANCE:opb_v20 -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd
+   line 39 - tool is overriding PARAMETER C_NUM_SLAVES value to 2
+INFO:MDT - IPNAME:plb2opb INSTANCE:plb2opb_bridge -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 49 - tool is overriding PARAMETER C_PLB_NUM_MASTERS value
+   to 2
+INFO:MDT - IPNAME:plb2opb INSTANCE:plb2opb_bridge -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bri
+   dge_v2_1_0.mpd line 50 - tool is overriding PARAMETER C_PLB_MID_WIDTH value
+   to 1
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1 INSTANCE:plb_bram_if_cntlr -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 42 - tool is overriding PARAMETER c_num_masters
+   value to 2
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1 INSTANCE:plb_bram_if_cntlr -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram
+   _if_cntlr_v2_1_0.mpd line 49 - tool is overriding PARAMETER c_plb_mid_width
+   value to 1
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1_bram INSTANCE:bram_block -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 36 - tool is overriding PARAMETER C_MEMSIZE value to 0x10000
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1_bram INSTANCE:bram_block -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 37 - tool is overriding PARAMETER C_PORT_DWIDTH value to 64
+INFO:MDT - IPNAME:plb_bram_if_cntlr_1_bram INSTANCE:bram_block -
+   C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1
+   _0.mpd line 39 - tool is overriding PARAMETER C_NUM_WE value to 8
+
+Running system level Update ...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Check platform configuration ...
+IPNAME:plb_v34 INSTANCE:plb - C:\BenChenJess\video_capture_00\system.mhs line 91
+- 2 master(s) : 2 slave(s)
+IPNAME:opb_v20 INSTANCE:opb - C:\BenChenJess\video_capture_00\system.mhs line
+100 - 1 master(s) : 2 slave(s)
+
+Check port drivers...
+WARNING:MDT - INST:and_gate_0 PORT:Res CONNECTOR:vid_dec_rst -
+   C:\BenChenJess\video_capture_00\system.mhs line 221 - floating connection!
+
+Performing Clock DRCs...
+
+INFO:MDT - Frequency for Top-Level Input Clock 'sys_clk_pin' is not specified.
+   Clock DRCs will not be performed for IPs connected to that clock port. 
+
+INFO:MDT - List of peripherals addressable from processor instance ppc405_0 : 
+  - opb
+  - RS232_Uart_1
+  - i2c
+  - plb_bram_if_cntlr_1
+INFO:MDT - List of peripherals addressable from processor instance ppc405_1 : 
+
+Building Directory Structure for ppc405_0
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\ppc405_0\libsr
+c\standalone_v1_00_a\ ...
+
+Copying files for driver opbarb_v1_02_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\opbarb_v1_02_a\src\ to
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\ppc405_0\libsr
+c\opbarb_v1_02_a\ ...
+
+Copying files for driver uartlite_v1_12_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v1_12_a\src\ to
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\ppc405_0\libsr
+c\uartlite_v1_12_a\ ...
+
+Copying files for driver iic_v1_13_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\iic_v1_13_a\src\ to
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\ppc405_0\libsr
+c\iic_v1_13_a\ ...
+
+Copying files for driver cpu_ppc405_v1_10_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_10_a\src\ to
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\ppc405_0\libsr
+c\cpu_ppc405_v1_10_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Libraries generated in
+C:\BenChenJess\video_capture_00\SDK_projects\ppc405_0_sw_platform\ppc405_0\lib\
+directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+LibGen Done. 

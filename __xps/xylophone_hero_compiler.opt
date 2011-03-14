@@ -1,0 +1,20 @@
+ppc405_0
+XYLOPHONE_HERO_SOURCES = /cygdrive/c/BCJ/Git/Xylophone_Hero/xylophone_hero/src/xylophone_hero.c /cygdrive/c/BCJ/Git/Xylophone_Hero/xylophone_hero/src/uart.c /cygdrive/c/BCJ/Git/Xylophone_Hero/xylophone_hero/src/xi2c_l.c 
+XYLOPHONE_HERO_HEADERS = /cygdrive/c//BCJ/Git/Xylophone_Hero/xylophone_hero/src/xylophone_hero.h /cygdrive/c//BCJ/Git/Xylophone_Hero/xylophone_hero/src/characters.h /cygdrive/c//BCJ/Git/Xylophone_Hero/xylophone_hero/src/uart.h /cygdrive/c//BCJ/Git/Xylophone_Hero/xylophone_hero/src/xi2c_l.h 
+XYLOPHONE_HERO_CC = powerpc-eabi-gcc
+XYLOPHONE_HERO_CC_SIZE = powerpc-eabi-size
+XYLOPHONE_HERO_CC_OPT = -O2
+XYLOPHONE_HERO_CFLAGS = 
+XYLOPHONE_HERO_CC_SEARCH = # -B
+XYLOPHONE_HERO_LIBPATH = -L./ppc405_0/lib/ # -L
+XYLOPHONE_HERO_INCLUDES = -I./ppc405_0/include/  -Ixylophone_hero/src/ # -I
+XYLOPHONE_HERO_LFLAGS = # -l
+XYLOPHONE_HERO_LINKER_SCRIPT = 
+XYLOPHONE_HERO_CC_DEBUG_FLAG =  -g 
+XYLOPHONE_HERO_CC_PROFILE_FLAG = # -pg
+XYLOPHONE_HERO_CC_GLOBPTR_FLAG= # -msdata=eabi
+XYLOPHONE_HERO_CC_INFERRED_FLAGS= 
+XYLOPHONE_HERO_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_START_ADDR=
+XYLOPHONE_HERO_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+XYLOPHONE_HERO_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(XYLOPHONE_HERO_CC_INFERRED_FLAGS)  \

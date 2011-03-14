@@ -1,0 +1,5 @@
+$Command Line:   xcs publish -reviewer1=Vasanth -notes="removing the deprecated tag for microblaze_exceptions since it causes other severe problems in the GUI" -noq -nover
+$Publish Tag :   
+$Published To:   Subsystem Integrator
+$reviewer1: Vasanth
+$notes: removing the deprecated tag for microblaze_exceptions since it causes other severe problems in the GUI

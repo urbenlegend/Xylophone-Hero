@@ -1,0 +1,233 @@
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 7.1 Build EDK_H.10.2
+# Thu Feb 17 12:18:14 2005
+# Target Board:  Xilinx XUP Virtex-II Pro Development System Rev C
+# Family:	 virtex2p
+# Device:	 xc2vp30
+# Package:	 ff896
+# Speed Grade:	 -7
+# Processor: PPC 405
+# Processor clock frequency: 100.000000 MHz
+# Bus clock frequency: 100.000000 MHz
+# Debug interface: FPGA JTAG
+# On Chip Memory :  64 KB
+# ##############################################################################
+
+
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT sys_clk_pin = dcm_clk_s, DIR = IN
+ PORT sys_rst_pin = sys_rst_s, DIR = IN
+ PORT fpga_0_RS232_Uart_1_RX_pin = fpga_0_RS232_Uart_1_RX, DIR = IN
+ PORT fpga_0_RS232_Uart_1_TX_pin = fpga_0_RS232_Uart_1_TX, DIR = OUT
+# #########################################################################
+# #
+# #  Video Capture interface including IIC bus
+# #
+# ##########################################################################
+ PORT LLC_CLOCK = LLC_CLOCK, DIR = IN, IOB_STATE = BUF
+ PORT Sda_decoder = Sda_decoder, DIR = INOUT
+ PORT Scl_decoder = Scl_decoder, DIR = INOUT
+ PORT YCrCb_in = YCrCb_in, DIR = IN, VEC = [9:2]
+ PORT R = R, DIR = OUT, VEC = [7:0]
+ PORT G = G, DIR = OUT, VEC = [7:0]
+ PORT B = B, DIR = OUT, VEC = [7:0]
+ PORT PIXEL_CLOCK = PIXEL_CLOCK, DIR = OUT, IOB_STATE = BUF
+ PORT H_SYNC_Z = H_SYNC_Z, DIR = OUT
+ PORT V_SYNC_Z = V_SYNC_Z, DIR = OUT
+ PORT BLANK_Z = BLANK_Z, DIR = OUT
+ PORT COMP_SYNC = COMP_SYNC, DIR = OUT
+ PORT RESET_VDEC1_Z = RESET_VDEC1_Z, DIR = OUT
+ PORT VDEC1_OE_Z = VDEC1_OE_Z, DIR = OUT
+ PORT VDEC1_PWRDN_Z = VDEC1_PWRDN_Z, DIR = OUT
+ PORT vid_dec_reset_in = vid_dec_reset_in, DIR = IN
+
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_0
+ PARAMETER HW_VER = 2.00.c
+ BUS_INTERFACE DPLB = plb
+ BUS_INTERFACE IPLB = plb
+ BUS_INTERFACE JTAGPPC = jtagppc_0_0
+ PORT PLBCLK = sys_clk_s
+ PORT C405RSTCHIPRESETREQ = C405RSTCHIPRESETREQ
+ PORT C405RSTCORERESETREQ = C405RSTCORERESETREQ
+ PORT C405RSTSYSRESETREQ = C405RSTSYSRESETREQ
+ PORT RSTC405RESETCHIP = RSTC405RESETCHIP
+ PORT RSTC405RESETCORE = RSTC405RESETCORE
+ PORT RSTC405RESETSYS = RSTC405RESETSYS
+ PORT CPMC405CLOCK = sys_clk_s
+END
+
+BEGIN ppc405
+ PARAMETER INSTANCE = ppc405_1
+ PARAMETER HW_VER = 2.00.c
+ BUS_INTERFACE JTAGPPC = jtagppc_0_1
+END
+
+BEGIN jtagppc_cntlr
+ PARAMETER INSTANCE = jtagppc_0
+ PARAMETER HW_VER = 2.00.a
+ BUS_INTERFACE JTAGPPC0 = jtagppc_0_0
+ BUS_INTERFACE JTAGPPC1 = jtagppc_0_1
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = reset_block
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_EXT_RESET_HIGH = 0
+ PORT Ext_Reset_In = sys_rst_s
+ PORT Slowest_sync_clk = sys_clk_s
+ PORT Chip_Reset_Req = C405RSTCHIPRESETREQ
+ PORT Core_Reset_Req = C405RSTCORERESETREQ
+ PORT System_Reset_Req = C405RSTSYSRESETREQ
+ PORT Rstc405resetchip = RSTC405RESETCHIP
+ PORT Rstc405resetcore = RSTC405RESETCORE
+ PORT Rstc405resetsys = RSTC405RESETSYS
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Dcm_locked = dcm_0_lock
+END
+
+BEGIN plb_v34
+ PARAMETER INSTANCE = plb
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_DCR_INTFCE = 0
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_bus_reset
+ PORT PLB_Clk = sys_clk_s
+END
+
+BEGIN opb_v20
+ PARAMETER INSTANCE = opb
+ PARAMETER HW_VER = 1.10.c
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT SYS_Rst = sys_bus_reset
+ PORT OPB_Clk = sys_clk_s
+ PORT OPB_Rst = OPB_Rst
+END
+
+BEGIN plb2opb_bridge
+ PARAMETER INSTANCE = plb2opb
+ PARAMETER HW_VER = 1.01.a
+ PARAMETER C_DCR_INTFCE = 0
+ PARAMETER C_RNG0_BASEADDR = 0x00000000
+ PARAMETER C_RNG0_HIGHADDR = 0x7fffffff
+ PARAMETER C_NUM_ADDR_RNG = 1
+ BUS_INTERFACE SPLB = plb
+ BUS_INTERFACE MOPB = opb
+ PORT PLB_Clk = sys_clk_s
+ PORT OPB_Clk = sys_clk_s
+END
+
+BEGIN opb_uartlite
+ PARAMETER INSTANCE = RS232_Uart_1
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_BAUDRATE = 9600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_CLK_FREQ = 100000000
+ PARAMETER C_BASEADDR = 0x40600000
+ PARAMETER C_HIGHADDR = 0x4060ffff
+ BUS_INTERFACE SOPB = opb
+ PORT OPB_Clk = sys_clk_s
+ PORT RX = fpga_0_RS232_Uart_1_RX
+ PORT TX = fpga_0_RS232_Uart_1_TX
+END
+
+BEGIN plb_bram_if_cntlr
+ PARAMETER INSTANCE = plb_bram_if_cntlr_1
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER c_plb_clk_period_ps = 10000
+ PARAMETER c_baseaddr = 0xffff0000
+ PARAMETER c_highaddr = 0xffffffff
+ BUS_INTERFACE PORTA = plb_bram_if_cntlr_1_port
+ BUS_INTERFACE SPLB = plb
+ PORT PLB_Clk = sys_clk_s
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = plb_bram_if_cntlr_1_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = plb_bram_if_cntlr_1_port
+END
+
+BEGIN dcm_module
+ PARAMETER INSTANCE = dcm_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_CLK0_BUF = TRUE
+ PARAMETER C_CLKIN_PERIOD = 10.000000
+ PARAMETER C_CLK_FEEDBACK = 1X
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PORT CLKIN = dcm_clk_s
+ PORT CLK0 = sys_clk_s
+ PORT CLKFB = sys_clk_s
+ PORT RST = net_gnd
+ PORT LOCKED = dcm_0_lock
+END
+
+BEGIN opb_iic
+ PARAMETER INSTANCE = i2c
+ PARAMETER HW_VER = 1.01.d
+ PARAMETER C_IIC_FREQ = 10000
+ PARAMETER C_GPO_WIDTH = 2
+ PARAMETER C_BASEADDR = 0x40800000
+ PARAMETER C_HIGHADDR = 0x4080ffff
+ BUS_INTERFACE SOPB = opb
+ PORT OPB_Clk = sys_clk_s
+ PORT OPB_Rst = i2c_rst
+ PORT Freeze = net_gnd
+ PORT Scl = Scl_decoder
+ PORT Sda = Sda_decoder
+ PORT Gpo = gpo_data
+END
+
+BEGIN video_capture
+ PARAMETER INSTANCE = video_capture_0
+ PARAMETER HW_VER = 1.01.b
+ PORT YCrCb_in = YCrCb_in
+ PORT LLC_CLOCK = LLC_CLOCK
+ PORT R = R
+ PORT G = G
+ PORT B = B
+ PORT PIXEL_CLOCK = PIXEL_CLOCK
+ PORT H_SYNC_Z = H_SYNC_Z
+ PORT V_SYNC_Z = V_SYNC_Z
+ PORT BLANK_Z = BLANK_Z
+ PORT COMP_SYNC = COMP_SYNC
+ PORT RESET_VDEC1_Z = RESET_VDEC1_Z
+ PORT VDEC1_OE_Z = VDEC1_OE_Z
+ PORT VDEC1_PWRDN_Z = VDEC1_PWRDN_Z
+ PORT system_dcm_locked = dcm_0_lock
+END
+
+BEGIN util_bus_split
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER INSTANCE = reset_split
+ PARAMETER C_SIZE_IN = 2
+ PARAMETER C_LEFT_POS = 0
+ PARAMETER C_SPLIT = 1
+ PORT Sig = gpo_data
+ PORT Out1 = i2c_rst_i
+ PORT Out2 = vid_dec_rst_i
+END
+
+BEGIN util_reduced_logic
+ PARAMETER INSTANCE = and_gate_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPERATION = and
+ PARAMETER C_SIZE = 2
+ PORT Op1 = vid_dec_reset_in & vid_dec_rst_i
+ PORT Res = vid_dec_rst
+END
+
+BEGIN util_reduced_logic
+ PARAMETER INSTANCE = i2c_rst_or
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_OPERATION = or
+ PARAMETER C_SIZE = 2
+ PORT Op1 = OPB_Rst & i2c_rst_i
+ PORT Res = i2c_rst
+END
+

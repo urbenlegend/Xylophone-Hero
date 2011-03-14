@@ -1,0 +1,2854 @@
+Xilinx Platform Studio (XPS)
+Xilinx EDK 7.1.2 Build EDK_H.12.5.1
+
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+At Local date and time: Mon Feb 27 14:23:25 2006
+Command xbash -q -c "cd /cygdrive/c/xup/ref_design/Winter_2006/video_capture_00/; /usr/bin/make -f system.make netlist; exit;" Started...
+****************************************************
+Creating system netlist for hardware specification..
+****************************************************
+platgen -p xc2vp30ff896-7 -lang vhdl   -st xst system.mhs
+
+Release Xilinx EDK 7.1.2 - platgen EDK_H.12.5.1
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc2vp30ff896-7 -lang vhdl -st xst system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd:33 - tool overriding c_device value X2VP4 to 2vp30
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:39 - tool overriding c_family value virtex2 to virtex2p
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd:56 - tool overriding c_family value virtex2 to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Check platform configuration ...
+INFO:coreutil - License for feature <opb_iic_v1> found but the generated design
+   will become dysfunctional after operating for some period of time in the
+   target FPGA. This allows you to evaluate this feature in hardware. You are
+   encouraged to purchase this feature.
+   Contact Xilinx to obtain a full license for this LogiCORE. For more
+   information please refer to www.xilinx.com/ipcenter/ipevaluation/
+
+plb_v34 (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92 - 2
+master(s) : 2 slave(s)
+opb_v20 (opb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 -
+1 master(s) : 2 slave(s)
+
+Check port drivers...
+
+Check platform address map ...
+
+Overriding system level properties ...
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:39
+- tool overriding c_plb_num_masters value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:40
+- tool overriding c_plb_num_slaves value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:41
+- tool overriding c_plb_mid_width value 2 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:36
+- tool overriding c_num_masters value 4 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:37
+- tool overriding c_num_slaves value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:48 - tool overriding c_plb_num_masters value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:49 - tool overriding c_plb_mid_width value 4 to 1
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:40 - tool overriding c_num_masters value 8 to 2
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:47 - tool overriding c_plb_mid_width value 3 to 1
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:35 - tool overriding c_memsize value 2048 to 65536
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:36 - tool overriding c_port_dwidth value 32 to 64
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:38 - tool overriding c_num_we value 4 to 8
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Performing System level DRCs on properties...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Processing licensed instances ...
+opb_iic (i2c) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:170 -
+processing license
+WARNING:coreutil:8 - Feature <opb_iic_v1> is enabled with a Hardware_Evaluation
+   license.
+Completion time: 2.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:150 - elaborating IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 7.00 seconds
+
+Constructing platform-level signal connectivity ...
+Completion time: 23.00 seconds
+
+Writing (top-level) BMM ...
+Writing BMM -
+C:\xup\ref_design\Winter_2006\video_capture_00\implementation\system.bmm
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+ppc405_0_wrapper (ppc405_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:47 - Running XST
+synthesis
+ppc405_1_wrapper (ppc405_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:63 - Running XST
+synthesis
+jtagppc_0_wrapper (jtagppc_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:69 - Running XST
+synthesis
+reset_block_wrapper (reset_block) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:76 - Running XST
+synthesis
+plb_wrapper (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92
+- Running XST synthesis
+opb_wrapper (opb) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 - Running XST
+synthesis
+plb2opb_wrapper (plb2opb) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:110 - Running XST
+synthesis
+rs232_uart_1_wrapper (rs232_uart_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:123 - Running XST
+synthesis
+plb_bram_if_cntlr_1_wrapper (plb_bram_if_cntlr_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:139 - Running XST
+synthesis
+plb_bram_if_cntlr_1_bram_wrapper (plb_bram_if_cntlr_1_bram) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:150 - Running XST
+synthesis
+dcm_0_wrapper (dcm_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:156 - Running XST
+synthesis
+i2c_wrapper (i2c) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:170 - Running XST
+synthesis
+video_capture_0_wrapper (video_capture_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:186 - Running XST
+synthesis
+reset_split_wrapper (reset_split) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:205 - Running XST
+synthesis
+and_gate_0_wrapper (and_gate_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:216 - Running XST
+synthesis
+i2c_rst_or_wrapper (i2c_rst_or) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:225 - Running XST
+synthesis
+
+Running NGCBUILD ...
+
+Rebuilding cache ...
+Total run time: 283.00 seconds
+Running synthesis...
+bash -c "cd synthesis; ./synthesis.sh; cd .."
+Release 7.1.02i - xst H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+RTL Output                         : YES
+Hierarchy Separator                : /
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> (Architecture <STRUCTURE>).
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1739: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1745: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1751: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1757: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1763: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1771: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1779: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1785: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1791: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1797: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1803: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1809: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1815: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1821: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1827: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1833: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1839: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1845: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1851: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1857: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1863: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1869: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1875: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1881: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1887: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1893: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1899: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1905: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1911: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1917: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1923: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1929: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1935: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1941: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1947: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1953: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1959: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1965: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1971: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1977: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1983: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1989: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1995: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2001: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2007: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2013: Generating a Black Box for component <IBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd".
+Unit <system> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '2vp30.nph' in environment c:/Xilinx.
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ../implementation/system.ngr
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 48
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# IO Buffers                       : 46
+#      IBUF                        : 12
+#      IOBUF                       : 2
+#      OBUF                        : 32
+# Others                           : 16
+#      and_gate_0_wrapper          : 1
+#      dcm_0_wrapper               : 1
+#      i2c_rst_or_wrapper          : 1
+#      i2c_wrapper                 : 1
+#      jtagppc_0_wrapper           : 1
+#      opb_wrapper                 : 1
+#      plb2opb_wrapper             : 1
+#      plb_bram_if_cntlr_1_bram_wrapper: 1
+#      plb_bram_if_cntlr_1_wrapper : 1
+#      plb_wrapper                 : 1
+#      ppc405_0_wrapper            : 1
+#      ppc405_1_wrapper            : 1
+#      reset_block_wrapper         : 1
+#      reset_split_wrapper         : 1
+#      rs232_uart_1_wrapper        : 1
+#      video_capture_0_wrapper     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of bonded IOBs:                 48  out of    556     8%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 2.924ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1424 / 1422
+-------------------------------------------------------------------------
+Delay:               2.924ns (Levels of Logic = 1)
+  Source:            i2c:Scl_O (PAD)
+  Destination:       Scl_decoder (PAD)
+
+  Data Path: i2c:Scl_O to Scl_decoder
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    i2c_wrapper:Scl_O      1   0.000   0.332  i2c (Scl_decoder_O)
+     IOBUF:I->IO               2.592          iobuf_5 (Scl_decoder)
+    ----------------------------------------
+    Total                      2.924ns (2.592ns logic, 0.332ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+CPU : 12.22 / 12.39 s | Elapsed : 12.00 / 12.00 s
+ 
+--> 
+
+Total memory usage is 159996 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+Done.
+At Local date and time: Mon Feb 27 15:50:36 2006
+Command xbash -q -c "cd /cygdrive/c/xup/ref_design/Winter_2006/video_capture_00/; /usr/bin/make -f system.make download; exit;" Started...
+****************************************************
+Creating system netlist for hardware specification..
+****************************************************
+platgen -p xc2vp30ff896-7 -lang vhdl   -st xst system.mhs
+
+Release Xilinx EDK 7.1.2 - platgen EDK_H.12.5.1
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc2vp30ff896-7 -lang vhdl -st xst system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd:33 - tool overriding c_device value X2VP4 to 2vp30
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:39 - tool overriding c_family value virtex2 to virtex2p
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd:56 - tool overriding c_family value virtex2 to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Check platform configuration ...
+INFO:coreutil - License for feature <opb_iic_v1> found but the generated design
+   will become dysfunctional after operating for some period of time in the
+   target FPGA. This allows you to evaluate this feature in hardware. You are
+   encouraged to purchase this feature.
+   Contact Xilinx to obtain a full license for this LogiCORE. For more
+   information please refer to www.xilinx.com/ipcenter/ipevaluation/
+
+plb_v34 (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92 - 2
+master(s) : 2 slave(s)
+opb_v20 (opb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 -
+1 master(s) : 2 slave(s)
+
+Check port drivers...
+
+Check platform address map ...
+
+Overriding system level properties ...
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:39
+- tool overriding c_plb_num_masters value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:40
+- tool overriding c_plb_num_slaves value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:41
+- tool overriding c_plb_mid_width value 2 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:36
+- tool overriding c_num_masters value 4 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:37
+- tool overriding c_num_slaves value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:48 - tool overriding c_plb_num_masters value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:49 - tool overriding c_plb_mid_width value 4 to 1
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:40 - tool overriding c_num_masters value 8 to 2
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:47 - tool overriding c_plb_mid_width value 3 to 1
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:35 - tool overriding c_memsize value 2048 to 65536
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:36 - tool overriding c_port_dwidth value 32 to 64
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:38 - tool overriding c_num_we value 4 to 8
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Performing System level DRCs on properties...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Processing licensed instances ...
+opb_iic (i2c) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:170 -
+processing license
+WARNING:coreutil:8 - Feature <opb_iic_v1> is enabled with a Hardware_Evaluation
+   license.
+Completion time: 1.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+ppc405 (ppc405_0) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:47
+- Copying cache implementation netlist
+ppc405 (ppc405_1) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:63
+- Copying cache implementation netlist
+jtagppc_cntlr (jtagppc_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:69 - Copying cache
+implementation netlist
+proc_sys_reset (reset_block) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:76 - Copying cache
+implementation netlist
+plb_v34 (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92 -
+Copying cache implementation netlist
+opb_v20 (opb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 -
+Copying cache implementation netlist
+plb2opb_bridge (plb2opb) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:110 - Copying cache
+implementation netlist
+opb_uartlite (rs232_uart_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:123 - Copying cache
+implementation netlist
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:139 - Copying cache
+implementation netlist
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:150 - Copying cache
+implementation netlist
+dcm_module (dcm_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:156 - Copying cache
+implementation netlist
+opb_iic (i2c) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:170 -
+Copying cache implementation netlist
+video_capture (video_capture_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:186 - Copying cache
+implementation netlist
+util_bus_split (reset_split) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:205 - Copying cache
+implementation netlist
+util_reduced_logic (and_gate_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:216 - Copying cache
+implementation netlist
+util_reduced_logic (i2c_rst_or) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:225 - Copying cache
+implementation netlist
+
+Elaborating instances ...
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:150 - elaborating IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 7.00 seconds
+
+Constructing platform-level signal connectivity ...
+Completion time: 26.00 seconds
+
+Writing (top-level) BMM ...
+Writing BMM -
+C:\xup\ref_design\Winter_2006\video_capture_00\implementation\system.bmm
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+video_capture_0_wrapper (video_capture_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:186 - Running XST
+synthesis
+
+Running NGCBUILD ...
+
+Rebuilding cache ...
+Total run time: 75.00 seconds
+Running synthesis...
+bash -c "cd synthesis; ./synthesis.sh; cd .."
+Release 7.1.02i - xst H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+RTL Output                         : YES
+Hierarchy Separator                : /
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> (Architecture <STRUCTURE>).
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1739: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1745: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1751: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1757: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1763: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1771: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1779: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1785: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1791: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1797: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1803: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1809: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1815: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1821: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1827: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1833: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1839: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1845: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1851: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1857: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1863: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1869: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1875: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1881: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1887: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1893: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1899: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1905: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1911: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1917: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1923: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1929: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1935: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1941: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1947: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1953: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1959: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1965: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1971: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1977: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1983: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1989: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1995: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2001: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2007: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2013: Generating a Black Box for component <IBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd".
+Unit <system> synthesized.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '2vp30.nph' in environment c:/Xilinx.
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ../implementation/system.ngr
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 48
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# IO Buffers                       : 46
+#      IBUF                        : 12
+#      IOBUF                       : 2
+#      OBUF                        : 32
+# Others                           : 16
+#      and_gate_0_wrapper          : 1
+#      dcm_0_wrapper               : 1
+#      i2c_rst_or_wrapper          : 1
+#      i2c_wrapper                 : 1
+#      jtagppc_0_wrapper           : 1
+#      opb_wrapper                 : 1
+#      plb2opb_wrapper             : 1
+#      plb_bram_if_cntlr_1_bram_wrapper: 1
+#      plb_bram_if_cntlr_1_wrapper : 1
+#      plb_wrapper                 : 1
+#      ppc405_0_wrapper            : 1
+#      ppc405_1_wrapper            : 1
+#      reset_block_wrapper         : 1
+#      reset_split_wrapper         : 1
+#      rs232_uart_1_wrapper        : 1
+#      video_capture_0_wrapper     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of bonded IOBs:                 48  out of    556     8%  
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 2.924ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1424 / 1422
+-------------------------------------------------------------------------
+Delay:               2.924ns (Levels of Logic = 1)
+  Source:            i2c:Scl_O (PAD)
+  Destination:       Scl_decoder (PAD)
+
+  Data Path: i2c:Scl_O to Scl_decoder
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    i2c_wrapper:Scl_O      1   0.000   0.332  i2c (Scl_decoder_O)
+     IOBUF:I->IO               2.592          iobuf_5 (Scl_decoder)
+    ----------------------------------------
+    Total                      2.924ns (2.592ns logic, 0.332ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+CPU : 13.42 / 13.61 s | Elapsed : 13.00 / 13.00 s
+ 
+--> 
+
+Total memory usage is 159996 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+Copying Xilinx Implementation tool scripts..
+*********************************************
+Running Xilinx Implementation tools..
+*********************************************
+xflow -wd implementation -p xc2vp30ff896-7 -implement fast_runtime.opt system.ngc
+Release 7.1.02i - Xflow H.38
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc2vp30ff896-7 -implement fast_runtime.opt
+system.ngc  
+.... Copying flowfile c:/Xilinx/xilinx/data/fpga.flw into working directory
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation 
+
+Using Flow File:
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation/fpga.flw 
+Using Option File(s): 
+ C:/xup/ref_design/Winter_2006/video_capture_00/implementation/fast_runtime.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation/system.ngc -uc
+system.ucf system.ngd 
+#----------------------------------------------#
+Release 7.1.02i - ngdbuild H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm -uc
+system.ucf
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation/system.ngc
+system.ngd 
+
+Reading NGO file
+'C:/xup/ref_design/Winter_2006/video_capture_00/implementation/system.ngc' ...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/reset_split_wrapp
+er.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/and_gate_0_wrappe
+r.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/i2c_rst_or_wrappe
+r.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/ppc405_0_wrapper.
+ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/ppc405_1_wrapper.
+ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/jtagppc_0_wrapper
+.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/reset_block_wrapp
+er.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb_wrapper.ngc".
+..
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/opb_wrapper.ngc".
+..
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb2opb_wrapper.n
+gc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/rs232_uart_1_wrap
+per.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb_bram_if_cntlr
+_1_wrapper.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb_bram_if_cntlr
+_1_bram_wrapper.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/dcm_0_wrapper.ngc
+"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/i2c_wrapper.ngc".
+..
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/video_capture_0_w
+rapper.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+INFO:coreutil - License for feature <opb_iic_v1> found but the generated design
+   will become dysfunctional after operating for some period of time in the
+   target FPGA. This allows you to evaluate this feature in hardware. You are
+   encouraged to purchase this feature.
+   Contact Xilinx to obtain a full license for this LogiCORE. For more
+   information please refer to www.xilinx.com/ipcenter/ipevaluation/
+
+
+Checking timing specifications ...
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_ADDR
+   ESS_COUNTER/I_SIZE_S_H_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_ADDR
+   ESS_COUNTER/I_SIZE_S_H_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_BKEND_WRCE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_BKEND_RDCE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_BKEND_CE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_ADDR_S_H_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_ADDR_S_H_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_ADDR_S_H_REG2' has unconnected output pin
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  11
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b system.ngd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - Map H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Using target part "2vp30ff896-7".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Writing design file "system_map.ncd"...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   12
+Logic Utilization:
+  Total Number Slice Registers:     1,512 out of  27,392    5%
+    Number used as Flip Flops:                 1,488
+    Number used as Latches:                       24
+  Number of 4 input LUTs:           1,452 out of  27,392    5%
+Logic Distribution:
+  Number of occupied Slices:        1,548 out of  13,696   11%
+  Number of Slices containing only related logic:   1,548 out of   1,548  100%
+  Number of Slices containing unrelated logic:          0 out of   1,548    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          1,825 out of  27,392    6%
+  Number used as logic:             1,452
+  Number used as a route-thru:         69
+  Number used for Dual Port RAMs:     202
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:     102
+
+  Number of bonded IOBs:               47 out of     556    8%
+    IOB Flip Flops:                    38
+    IOB Dual-Data Rate Flops:           1
+  Number of PPC405s:                   2 out of       2  100%
+  Number of JTAGPPCs:                  1 out of       1  100%
+  Number of Block RAMs:                38 out of     136   27%
+  Number of MULT18X18s:                 5 out of     136    3%
+  Number of GCLKs:                      6 out of      16   37%
+  Number of DCMs:                       1 out of       8   12%
+  Number of GTs:                        0 out of       8    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  2,572,392
+Additional JTAG gate count for IOBs:  2,256
+Peak Memory Usage:  191 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - par H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+c:/Xilinx.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000
+Celsius)
+Initializing voltage to 1.500 Volts. (default - Range: 1.400 to 1.600 Volts)
+
+Device speed data version:  "PRODUCTION 1.91 2005-07-22".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                  6 out of 16     37%
+   Number of DCMs                      1 out of 8      12%
+   Number of External IOBs            47 out of 556     8%
+      Number of LOCed IOBs            47 out of 47    100%
+
+   Number of JTAGPPCs                  1 out of 1     100%
+   Number of MULT18X18s                5 out of 136     3%
+   Number of PPC405s                   2 out of 2     100%
+   Number of RAMB16s                  38 out of 136    27%
+   Number of SLICEs                 1548 out of 13696  11%
+
+
+Overall effort level (-ol):   High (set by user)
+Placer effort level (-pl):    High (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High (set by user)
+
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:990183) REAL time: 8 secs 
+
+Phase 2.31
+WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor
+   requires specialdesign considerations when operating above 350 MHz in the -7
+   speed grade part.Please see Xilinx Application Note XAPP755 for details.
+Phase 2.31 (Checksum:1312cfe) REAL time: 8 secs 
+
+Phase 3.2
+.
+
+
+Phase 3.2 (Checksum:1c9c37d) REAL time: 14 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 14 secs 
+
+Phase 5.3
+Phase 5.3 (Checksum:2faf07b) REAL time: 14 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 14 secs 
+
+Phase 7.8
+.................................................................................
+......
+............................................
+...........................
+.....................
+.....
+.....
+Phase 7.8 (Checksum:e8b137) REAL time: 29 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 30 secs 
+
+Phase 9.18
+Phase 9.18 (Checksum:55d4a77) REAL time: 36 secs 
+
+Phase 10.5
+Phase 10.5 (Checksum:5f5e0f6) REAL time: 36 secs 
+
+Phase 11.27
+Phase 11.27 (Checksum:68e7775) REAL time: 37 secs 
+
+Phase 12.24
+Phase 12.24 (Checksum:7270df4) REAL time: 37 secs 
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 39 secs 
+Total CPU time to Placer completion: 38 secs 
+
+Starting Router
+Phase 1: 14411 unrouted;       REAL time: 51 secs 
+Phase 2: 11943 unrouted;       REAL time: 52 secs 
+Phase 3: 2480 unrouted;       REAL time: 1 mins 33 secs 
+
+Phase 4: 2480 unrouted; (0)      REAL time: 1 mins 33 secs 
+
+Phase 5: 2480 unrouted; (0)      REAL time: 1 mins 33 secs 
+
+Phase 6: 2480 unrouted; (0)      REAL time: 1 mins 33 secs 
+Phase 7: 0 unrouted; (0)      REAL time: 1 mins 40 secs 
+Phase 8: 0 unrouted; (0)      REAL time: 1 mins 41 secs 
+WARNING:Route - CLK Net:video_capture_0/video_capture_0/YCrCb2RGB_i/R_int<18>
+may have excessive skew because 24 NON-CLK pins
+failed to route using a CLK template.
+WARNING:Route - CLK Net:video_capture_0/video_capture_0/YCrCb2RGB_i/B_int<18>
+may have excessive skew because 24 NON-CLK pins
+failed to route using a CLK template.
+WARNING:Route - CLK Net:video_capture_0/video_capture_0/YCrCb2RGB_i/G_int<18>
+may have excessive skew because 24 NON-CLK pins
+failed to route using a CLK template.
+WARNING:Route - CLK
+   Net:video_capture_0/video_capture_0/vp422_444_dup_i/Mshreg_pipe_ho<0>_0
+may have excessive skew because 2 CLK pins and 7 NON_CLK pins
+failed to route using a CLK template.
+
+Total REAL time to Router completion: 1 mins 43 secs 
+Total CPU time to Router completion: 1 mins 41 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|  o_capture_0/clk_27 |     BUFGMUX6S| No   |  143 |  0.266     |  1.252      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/YCrCb2RG |              |      |      |            |             |
+|       B_i/R_int<18> |     BUFGMUX4P| No   |   32 |  0.111     |  1.158      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/YCrCb2RG |              |      |      |            |             |
+|       B_i/B_int<18> |     BUFGMUX1P| No   |   32 |  0.007     |  1.152      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|  o_capture_0/clk_13 |     BUFGMUX3P| No   |   99 |  0.198     |  1.192      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/YCrCb2RG |              |      |      |            |             |
+|       B_i/G_int<18> |     BUFGMUX7S| No   |   32 |  0.018     |  1.163      |
++---------------------+--------------+------+------+------------+-------------+
+|plb_bram_if_cntlr_1_ |              |      |      |            |             |
+|       port_BRAM_Clk |     BUFGMUX2P| No   |  915 |  0.280     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/vp422_44 |              |      |      |            |             |
+|4_dup_i/Mshreg_pipe_ |              |      |      |            |             |
+|             ho<0>_0 |         Local|      |    9 |  0.056     |  2.514      |
++---------------------+--------------+------+------+------------+-------------+
+|jtagppc_0_0_JTGC405T |              |      |      |            |             |
+|                  CK |         Local|      |    2 |  1.611     |  4.434      |
++---------------------+--------------+------+------+------------+-------------+
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+--------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic 
+                                            |            |            | Levels
+--------------------------------------------------------------------------------
+  NET "dcm_clk_s" PERIOD = 10 ns HIGH 50%   | N/A        | N/A        | N/A  
+--------------------------------------------------------------------------------
+  PERIOD analysis for net "dcm_0/dcm_0/CLK0 | 10.000ns   | 9.817ns    | 6    
+  _BUF" derived from  NET "dcm_clk_s" PERIO |            |            |      
+  D = 10 ns HIGH 50%                        |            |            |      
+--------------------------------------------------------------------------------
+  NET "video_capture_0/video_capture_0/clk_ | 25.000ns   | 5.228ns    | 1    
+  271" PERIOD = 25 ns HIGH 50%              |            |            |      
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the
+   constraint does not cover any paths or that it has no requested value.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 45 secs 
+Total CPU time to PAR completion: 1 mins 43 secs 
+
+Peak Memory Usage:  224 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 5
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - Trace H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+c:/Xilinx.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+--------------------------------------------------------------------------------
+Release 7.1.02i Trace H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc2vp30,-7 (PRODUCTION 1.91 2005-07-22)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 26175 paths, 0 nets, and 9828 connections
+
+Design statistics:
+   Minimum period:   9.817ns (Maximum frequency: 101.864MHz)
+
+
+Analysis completed Mon Feb 27 15:54:35 2006
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 1
+Total time: 6 secs 
+xflow done!
+cd implementation; bitgen -w -f bitgen.ut system
+Release 7.1.02i - Bitgen H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+c:/Xilinx.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+Opened constraints file system.pcf.
+
+Mon Feb 27 15:54:40 2006
+
+Running DRC.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin CPMC405CLOCK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin PLBCLK for the comp
+   ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM driven
+   clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+DRC detected 0 errors and 6 warnings.
+Creating bit map...
+Saving bit stream in "system.bit".
+Creating bit mask...
+Saving mask bit stream in "system.msk".
+Bitstream generation is complete.
+*********************************************
+Creating software libraries...
+*********************************************
+libgen -mhs system.mhs -p xc2vp30ff896-7  system.mss
+libgen
+Xilinx EDK 7.1.2 Build EDK_H.12.5.1
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -mhs system.mhs -p xc2vp30ff896-7 system.mss 
+Output Directory (-od)		: C:\xup\ref_design\Winter_2006\video_capture_00\
+Part (-p)			: virtex2p
+
+Software Specification file	: system.mss
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd:33 - tool overriding c_device value X2VP4 to 2vp30
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:39 - tool overriding c_family value virtex2 to virtex2p
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd:56 - tool overriding c_family value virtex2 to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Check platform configuration ...
+INFO:coreutil - License for feature <opb_iic_v1> found but the generated design
+   will become dysfunctional after operating for some period of time in the
+   target FPGA. This allows you to evaluate this feature in hardware. You are
+   encouraged to purchase this feature.
+   Contact Xilinx to obtain a full license for this LogiCORE. For more
+   information please refer to www.xilinx.com/ipcenter/ipevaluation/
+
+plb_v34 (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92 - 2
+master(s) : 2 slave(s)
+opb_v20 (opb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 -
+1 master(s) : 2 slave(s)
+
+Check port drivers...
+
+Check platform address map ...
+
+Overriding system level properties ...
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:39
+- tool overriding c_plb_num_masters value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:40
+- tool overriding c_plb_num_slaves value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:41
+- tool overriding c_plb_mid_width value 2 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:36
+- tool overriding c_num_masters value 4 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:37
+- tool overriding c_num_slaves value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:48 - tool overriding c_plb_num_masters value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:49 - tool overriding c_plb_mid_width value 4 to 1
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:40 - tool overriding c_num_masters value 8 to 2
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:47 - tool overriding c_plb_mid_width value 3 to 1
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:35 - tool overriding c_memsize value 2048 to 65536
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:36 - tool overriding c_port_dwidth value 32 to 64
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:38 - tool overriding c_num_we value 4 to 8
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Performing System level DRCs on properties...
+WARNING:MDT - Peripheral dcm_0 is not connected to any of the processors in the
+   system. Check for the following reasons.
+   1. dcm_0 is not connected to any of the buses connected to a processor. 
+   2. dcm_0 does not have adresses set correctly. 
+   3. dcm_0's address is not within any of the bridge windows connected to a
+   processor.
+WARNING:MDT - Peripheral and_gate_0 is not connected to any of the processors in
+   the system. Check for the following reasons.
+   1. and_gate_0 is not connected to any of the buses connected to a processor. 
+   2. and_gate_0 does not have adresses set correctly. 
+   3. and_gate_0's address is not within any of the bridge windows connected to
+   a processor.
+WARNING:MDT - Peripheral i2c_rst_or is not connected to any of the processors in
+   the system. Check for the following reasons.
+   1. i2c_rst_or is not connected to any of the buses connected to a processor. 
+   2. i2c_rst_or does not have adresses set correctly. 
+   3. i2c_rst_or's address is not within any of the bridge windows connected to
+   a processor.
+INFO:MDT - List of peripherals addressable from processor instance ppc405_0 : 
+  - RS232_Uart_1
+  - i2c
+  - plb_bram_if_cntlr_1
+INFO:MDT - List of peripherals addressable from processor instance ppc405_1 : 
+
+Building Directory Structure for ppc405_0
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_0\libsrc\standalone_v1_00_
+a\ ...
+
+Copying files for driver uartlite_v1_00_b from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\uartlite_v1_00_b\src\ to
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_0\libsrc\uartlite_v1_00_b\
+...
+
+Copying files for driver iic_v1_01_d from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\iic_v1_01_d\src\ to
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_0\libsrc\iic_v1_01_d\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_0\libsrc\cpu_ppc405_v1_00_
+a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+Compiling commo
+powerpc-eabi-ar: creating ../../../lib/libxil.
+Compiling ipi
+Compiling bs
+Compiling uartlit
+Compiling ii
+Compiling cpu_ppc40
+
+Libraries generated in
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_0\lib\ directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+Building Directory Structure for ppc405_1
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+C:\EDK\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_1\libsrc\standalone_v1_00_
+a\ ...
+
+Copying files for driver cpu_ppc405_v1_00_a from
+C:\EDK\sw\XilinxProcessorIPLib\drivers\cpu_ppc405_v1_00_a\src\ to
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_1\libsrc\cpu_ppc405_v1_00_
+a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=powerpc-eabi-gcc" "ARCHIVER=powerpc-eabi-ar"
+"COMPILER_FLAGS= -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+Compiling commo
+powerpc-eabi-ar: creating ../../../lib/libxil.
+Compiling bs
+Compiling cpu_ppc40
+
+Libraries generated in
+C:\xup\ref_design\Winter_2006\video_capture_00\ppc405_1\lib\ directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+LibGen Done. 
+powerpc-eabi-gcc -O2 config_decoder_revb/src/xi2c_l.c config_decoder_revb/src/xup_config_decoder.c config_decoder_revb/src/uart.c  -o config_decoder_revb/executable.elf \
+        -g   -I./ppc405_0/include/  -Iconfig_decoder_revb/src/  -L./ppc405_0/lib/  \
+  
+powerpc-eabi-size config_decoder_revb/executable.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7374	    960	   8208	  16542	   409e	config_decoder_revb/executable.elf
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit system.mhs  -pe ppc405_0 config_decoder_revb/executable.elf  \
+-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 7.1.2 Build EDK_H.12.5.1
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd:33 - tool overriding c_device value X2VP4 to 
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:36 - tool overriding c_family value virtex2p to 
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:39 - tool overriding c_family value virtex2 to 
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd:56 - tool overriding c_family value virtex2 to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file config_decoder_revb/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm implementation/system_bd -bt implementation/system.bit  -bd
+config_decoder_revb/executable.elf tag plb_bram_if_cntlr_1_bram  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+*********************************************
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+Release 7.1.02i - iMPACT H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+Connecting to cable (USB Port).
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2. LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver xusbdfwu.sys version: 1018 (1018).
+ Driver windrvr6.sys version = 6.2.2.2.
+Cable connection failed.
+Connecting to cable (COM1 Port).
+Cable connection failed.
+Cable connection failed.
+Cable connection failed.
+Cable connection failed.
+Cable autodetection failed.
+make: *** [download] Error 1
+Done.
+At Local date and time: Mon Feb 27 16:16:23 2006
+Command xbash -q -c "cd /cygdrive/c/xup/ref_design/Winter_2006/video_capture_00/; /usr/bin/make -f system.make download; exit;" Started...
+
+*********************************************
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+Release 7.1.02i - iMPACT H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+Connecting to cable (USB Port).
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2. LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver xusbdfwu.sys version: 1018 (1018).
+ Driver windrvr6.sys version = 6.2.2.2.
+Cable connection failed.
+Connecting to cable (COM1 Port).
+Cable connection failed.
+Cable connection failed.
+Cable connection failed.
+Cable connection failed.
+Cable autodetection failed.
+make: *** [download] Error 1
+Done.
+At Local date and time: Mon Feb 27 16:55:25 2006
+Command xbash -q -c "cd /cygdrive/c/xup/ref_design/Winter_2006/video_capture_00/; /usr/bin/make -f system.make download; exit;" Started...
+****************************************************
+Creating system netlist for hardware specification..
+****************************************************
+platgen -p xc2vp30ff896-7 -lang vhdl   -st xst system.mhs
+
+Release Xilinx EDK 7.1.2 - platgen EDK_H.12.5.1
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc2vp30ff896-7 -lang vhdl -st xst system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd:33 - tool overriding c_device value X2VP4 to 2vp30
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:39 - tool overriding c_family value virtex2 to virtex2p
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd:56 - tool overriding c_family value virtex2 to virtex2p
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Check platform configuration ...
+INFO:coreutil - License for feature <opb_iic_v1> found but the generated design
+   will become dysfunctional after operating for some period of time in the
+   target FPGA. This allows you to evaluate this feature in hardware. You are
+   encouraged to purchase this feature.
+   Contact Xilinx to obtain a full license for this LogiCORE. For more
+   information please refer to www.xilinx.com/ipcenter/ipevaluation/
+
+plb_v34 (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92 - 2
+master(s) : 2 slave(s)
+opb_v20 (opb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 -
+1 master(s) : 2 slave(s)
+
+Check port drivers...
+
+Check platform address map ...
+
+Overriding system level properties ...
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:39
+- tool overriding c_plb_num_masters value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:40
+- tool overriding c_plb_num_slaves value 4 to 2
+plb_v34 (plb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_v34_v1_02_a\data\plb_v34_v2_1_0.mpd:41
+- tool overriding c_plb_mid_width value 2 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:36
+- tool overriding c_num_masters value 4 to 1
+opb_v20 (opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:37
+- tool overriding c_num_slaves value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:48 - tool overriding c_plb_num_masters value 4 to 2
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:49 - tool overriding c_plb_mid_width value 4 to 1
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:40 - tool overriding c_num_masters value 8 to 2
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb_bram_if_cntlr_v1_00_b\data\plb_bram_if
+_cntlr_v2_1_0.mpd:47 - tool overriding c_plb_mid_width value 3 to 1
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:35 - tool overriding c_memsize value 2048 to 65536
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:36 - tool overriding c_port_dwidth value 32 to 64
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:38 - tool overriding c_num_we value 4 to 8
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Performing System level DRCs on properties...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Processing licensed instances ...
+opb_iic (i2c) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:170 -
+processing license
+WARNING:coreutil:8 - Feature <opb_iic_v1> is enabled with a Hardware_Evaluation
+   license.
+Completion time: 3.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+ppc405 (ppc405_0) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:47
+- Copying cache implementation netlist
+ppc405 (ppc405_1) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:63
+- Copying cache implementation netlist
+jtagppc_cntlr (jtagppc_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:69 - Copying cache
+implementation netlist
+proc_sys_reset (reset_block) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:76 - Copying cache
+implementation netlist
+plb_v34 (plb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:92 -
+Copying cache implementation netlist
+opb_v20 (opb) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:101 -
+Copying cache implementation netlist
+plb2opb_bridge (plb2opb) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:110 - Copying cache
+implementation netlist
+opb_uartlite (rs232_uart_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:123 - Copying cache
+implementation netlist
+plb_bram_if_cntlr (plb_bram_if_cntlr_1) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:139 - Copying cache
+implementation netlist
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:150 - Copying cache
+implementation netlist
+dcm_module (dcm_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:156 - Copying cache
+implementation netlist
+opb_iic (i2c) - C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:170 -
+Copying cache implementation netlist
+video_capture (video_capture_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:186 - Copying cache
+implementation netlist
+util_bus_split (reset_split) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:205 - Copying cache
+implementation netlist
+util_reduced_logic (and_gate_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:216 - Copying cache
+implementation netlist
+util_reduced_logic (i2c_rst_or) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:225 - Copying cache
+implementation netlist
+
+Elaborating instances ...
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:150 - elaborating IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 13.00 seconds
+
+Constructing platform-level signal connectivity ...
+Completion time: 39.00 seconds
+
+Writing (top-level) BMM ...
+Writing BMM -
+C:\xup\ref_design\Winter_2006\video_capture_00\implementation\system.bmm
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+video_capture_0_wrapper (video_capture_0) -
+C:\xup\ref_design\Winter_2006\video_capture_00\system.mhs:186 - Running XST
+synthesis
+
+Running NGCBUILD ...
+
+Rebuilding cache ...
+Total run time: 122.00 seconds
+Running synthesis...
+bash -c "cd synthesis; ./synthesis.sh; cd .."
+Release 7.1.02i - xst H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc2vp30ff896-7
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+RTL Output                         : YES
+Hierarchy Separator                : /
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> (Architecture <STRUCTURE>).
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1739: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1745: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1751: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1757: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1763: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1771: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1779: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1785: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1791: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1797: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1803: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1809: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1815: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1821: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1827: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1833: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1839: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1845: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1851: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1857: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1863: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1869: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1875: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1881: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1887: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1893: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1899: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1905: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1911: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1917: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1923: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1929: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1935: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1941: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1947: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1953: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1959: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1965: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1971: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1977: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1983: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1989: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 1995: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2001: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2007: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd" line 2013: Generating a Black Box for component <IBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "c:/xup/ref_design/Winter_2006/video_capture_00/synthesis/../hdl/system.vhd".
+Unit <system> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '2vp30.nph' in environment c:/Xilinx.
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ../implementation/system.ngr
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 48
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# IO Buffers                       : 46
+#      IBUF                        : 12
+#      IOBUF                       : 2
+#      OBUF                        : 32
+# Others                           : 16
+#      and_gate_0_wrapper          : 1
+#      dcm_0_wrapper               : 1
+#      i2c_rst_or_wrapper          : 1
+#      i2c_wrapper                 : 1
+#      jtagppc_0_wrapper           : 1
+#      opb_wrapper                 : 1
+#      plb2opb_wrapper             : 1
+#      plb_bram_if_cntlr_1_bram_wrapper: 1
+#      plb_bram_if_cntlr_1_wrapper : 1
+#      plb_wrapper                 : 1
+#      ppc405_0_wrapper            : 1
+#      ppc405_1_wrapper            : 1
+#      reset_block_wrapper         : 1
+#      reset_split_wrapper         : 1
+#      rs232_uart_1_wrapper        : 1
+#      video_capture_0_wrapper     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of bonded IOBs:                 48  out of    556     8%  
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 2.924ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1424 / 1422
+-------------------------------------------------------------------------
+Delay:               2.924ns (Levels of Logic = 1)
+  Source:            i2c:Scl_O (PAD)
+  Destination:       Scl_decoder (PAD)
+
+  Data Path: i2c:Scl_O to Scl_decoder
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    i2c_wrapper:Scl_O      1   0.000   0.332  i2c (Scl_decoder_O)
+     IOBUF:I->IO               2.592          iobuf_5 (Scl_decoder)
+    ----------------------------------------
+    Total                      2.924ns (2.592ns logic, 0.332ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+CPU : 17.03 / 17.30 s | Elapsed : 17.00 / 17.00 s
+ 
+--> 
+
+Total memory usage is 159996 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+Copying Xilinx Implementation tool scripts..
+*********************************************
+Running Xilinx Implementation tools..
+*********************************************
+xflow -wd implementation -p xc2vp30ff896-7 -implement fast_runtime.opt system.ngc
+Release 7.1.02i - Xflow H.38
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc2vp30ff896-7 -implement fast_runtime.opt
+system.ngc  
+
+Using Flow File:
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation/fpga.flw 
+Using Option File(s): 
+ C:/xup/ref_design/Winter_2006/video_capture_00/implementation/fast_runtime.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation/system.ngc -uc
+system.ucf system.ngd 
+#----------------------------------------------#
+Release 7.1.02i - ngdbuild H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc2vp30ff896-7 -nt timestamp -bm system.bmm -uc
+system.ucf
+C:/xup/ref_design/Winter_2006/video_capture_00/implementation/system.ngc
+system.ngd 
+
+Reading NGO file
+'C:/xup/ref_design/Winter_2006/video_capture_00/implementation/system.ngc' ...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/reset_split_wrapp
+er.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/and_gate_0_wrappe
+r.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/i2c_rst_or_wrappe
+r.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/ppc405_0_wrapper.
+ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/ppc405_1_wrapper.
+ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/jtagppc_0_wrapper
+.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/reset_block_wrapp
+er.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb_wrapper.ngc".
+..
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/opb_wrapper.ngc".
+..
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb2opb_wrapper.n
+gc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/rs232_uart_1_wrap
+per.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb_bram_if_cntlr
+_1_wrapper.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/plb_bram_if_cntlr
+_1_bram_wrapper.ngc"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/dcm_0_wrapper.ngc
+"...
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/i2c_wrapper.ngc".
+..
+Loading design module
+"C:/xup/ref_design/Winter_2006/video_capture_00/implementation/video_capture_0_w
+rapper.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+INFO:coreutil - License for feature <opb_iic_v1> found but the generated design
+   will become dysfunctional after operating for some period of time in the
+   target FPGA. This allows you to evaluate this feature in hardware. You are
+   encouraged to purchase this feature.
+   Contact Xilinx to obtain a full license for this LogiCORE. For more
+   information please refer to www.xilinx.com/ipcenter/ipevaluation/
+
+
+Checking timing specifications ...
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_ADDR
+   ESS_COUNTER/I_SIZE_S_H_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_ADDR
+   ESS_COUNTER/I_SIZE_S_H_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_CS_SIZE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_BKEND_WRCE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_BKEND_RDCE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_BKEND_CE_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_ADDR_S_H_REG1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_ADDR_S_H_REG0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'plb_bram_if_cntlr_1/plb_bram_if_cntlr_1/I_PLB_IPIF/I_SLAVE_ATTACHMENT/I_DECO
+   DER/I_ADDR_S_H_REG2' has unconnected output pin
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  11
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b system.ngd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - Map H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Using target part "2vp30ff896-7".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Writing design file "system_map.ncd"...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   12
+Logic Utilization:
+  Total Number Slice Registers:     1,512 out of  27,392    5%
+    Number used as Flip Flops:                 1,488
+    Number used as Latches:                       24
+  Number of 4 input LUTs:           1,452 out of  27,392    5%
+Logic Distribution:
+  Number of occupied Slices:        1,548 out of  13,696   11%
+  Number of Slices containing only related logic:   1,548 out of   1,548  100%
+  Number of Slices containing unrelated logic:          0 out of   1,548    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          1,825 out of  27,392    6%
+  Number used as logic:             1,452
+  Number used as a route-thru:         69
+  Number used for Dual Port RAMs:     202
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:     102
+
+  Number of bonded IOBs:               47 out of     556    8%
+    IOB Flip Flops:                    38
+    IOB Dual-Data Rate Flops:           1
+  Number of PPC405s:                   2 out of       2  100%
+  Number of JTAGPPCs:                  1 out of       1  100%
+  Number of Block RAMs:                38 out of     136   27%
+  Number of MULT18X18s:                 5 out of     136    3%
+  Number of GCLKs:                      6 out of      16   37%
+  Number of DCMs:                       1 out of       8   12%
+  Number of GTs:                        0 out of       8    0%
+  Number of GT10s:                      0 out of       0    0%
+
+Total equivalent gate count for design:  2,572,392
+Additional JTAG gate count for IOBs:  2,256
+Peak Memory Usage:  191 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - par H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+c:/Xilinx.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000
+Celsius)
+Initializing voltage to 1.500 Volts. (default - Range: 1.400 to 1.600 Volts)
+
+Device speed data version:  "PRODUCTION 1.91 2005-07-22".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                  6 out of 16     37%
+   Number of DCMs                      1 out of 8      12%
+   Number of External IOBs            47 out of 556     8%
+      Number of LOCed IOBs            47 out of 47    100%
+
+   Number of JTAGPPCs                  1 out of 1     100%
+   Number of MULT18X18s                5 out of 136     3%
+   Number of PPC405s                   2 out of 2     100%
+   Number of RAMB16s                  38 out of 136    27%
+   Number of SLICEs                 1548 out of 13696  11%
+
+
+Overall effort level (-ol):   High (set by user)
+Placer effort level (-pl):    High (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High (set by user)
+
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 10 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:990183) REAL time: 12 secs 
+
+Phase 2.31
+WARNING:Place:479 - Use of the left PPC405 has been detected. The left processor
+   requires specialdesign considerations when operating above 350 MHz in the -7
+   speed grade part.Please see Xilinx Application Note XAPP755 for details.
+Phase 2.31 (Checksum:1312cfe) REAL time: 12 secs 
+
+Phase 3.2
+.
+
+
+Phase 3.2 (Checksum:1c9c37d) REAL time: 22 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 22 secs 
+
+Phase 5.3
+Phase 5.3 (Checksum:2faf07b) REAL time: 22 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 22 secs 
+
+Phase 7.8
+.......................................................
+..........................
+......
+...........................................
+..............
+..............
+.....................
+..
+...
+.....
+Phase 7.8 (Checksum:e8b137) REAL time: 44 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 44 secs 
+
+Phase 9.18
+Phase 9.18 (Checksum:55d4a77) REAL time: 55 secs 
+
+Phase 10.5
+Phase 10.5 (Checksum:5f5e0f6) REAL time: 55 secs 
+
+Phase 11.27
+Phase 11.27 (Checksum:68e7775) REAL time: 55 secs 
+
+Phase 12.24
+Phase 12.24 (Checksum:7270df4) REAL time: 56 secs 
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 1 mins 
+Total CPU time to Placer completion: 47 secs 
+
+Starting Router
+Phase 1: 14411 unrouted;       REAL time: 1 mins 19 secs 
+
+Phase 2: 11943 unrouted;       REAL time: 1 mins 21 secs 
+Phase 3: 2480 unrouted;       REAL time: 2 mins 23 secs 
+
+Phase 4: 2480 unrouted; (0)      REAL time: 2 mins 23 secs 
+
+Phase 5: 2480 unrouted; (0)      REAL time: 2 mins 23 secs 
+
+Phase 6: 2480 unrouted; (0)      REAL time: 2 mins 23 secs 
+Phase 7: 0 unrouted; (0)      REAL time: 2 mins 33 secs 
+Phase 8: 0 unrouted; (0)      REAL time: 2 mins 37 secs 
+WARNING:Route - CLK Net:video_capture_0/video_capture_0/YCrCb2RGB_i/R_int<18>
+may have excessive skew because 24 NON-CLK pins
+failed to route using a CLK template.
+WARNING:Route - CLK Net:video_capture_0/video_capture_0/YCrCb2RGB_i/B_int<18>
+may have excessive skew because 24 NON-CLK pins
+failed to route using a CLK template.
+WARNING:Route - CLK Net:video_capture_0/video_capture_0/YCrCb2RGB_i/G_int<18>
+may have excessive skew because 24 NON-CLK pins
+failed to route using a CLK template.
+WARNING:Route - CLK
+   Net:video_capture_0/video_capture_0/vp422_444_dup_i/Mshreg_pipe_ho<0>_0
+may have excessive skew because 2 CLK pins and 7 NON_CLK pins
+failed to route using a CLK template.
+
+Total REAL time to Router completion: 2 mins 40 secs 
+Total CPU time to Router completion: 2 mins 8 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|  o_capture_0/clk_27 |     BUFGMUX6S| No   |  143 |  0.266     |  1.252      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/YCrCb2RG |              |      |      |            |             |
+|       B_i/R_int<18> |     BUFGMUX4P| No   |   32 |  0.111     |  1.158      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/YCrCb2RG |              |      |      |            |             |
+|       B_i/B_int<18> |     BUFGMUX1P| No   |   32 |  0.007     |  1.152      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|  o_capture_0/clk_13 |     BUFGMUX3P| No   |   99 |  0.198     |  1.192      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/YCrCb2RG |              |      |      |            |             |
+|       B_i/G_int<18> |     BUFGMUX7S| No   |   32 |  0.018     |  1.163      |
++---------------------+--------------+------+------+------------+-------------+
+|plb_bram_if_cntlr_1_ |              |      |      |            |             |
+|       port_BRAM_Clk |     BUFGMUX2P| No   |  915 |  0.280     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|video_capture_0/vide |              |      |      |            |             |
+|o_capture_0/vp422_44 |              |      |      |            |             |
+|4_dup_i/Mshreg_pipe_ |              |      |      |            |             |
+|             ho<0>_0 |         Local|      |    9 |  0.056     |  2.514      |
++---------------------+--------------+------+------+------------+-------------+
+|jtagppc_0_0_JTGC405T |              |      |      |            |             |
+|                  CK |         Local|      |    2 |  1.611     |  4.434      |
++---------------------+--------------+------+------+------------+-------------+
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+--------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic 
+                                            |            |            | Levels
+--------------------------------------------------------------------------------
+  NET "dcm_clk_s" PERIOD = 10 ns HIGH 50%   | N/A        | N/A        | N/A  
+--------------------------------------------------------------------------------
+  PERIOD analysis for net "dcm_0/dcm_0/CLK0 | 10.000ns   | 9.817ns    | 6    
+  _BUF" derived from  NET "dcm_clk_s" PERIO |            |            |      
+  D = 10 ns HIGH 50%                        |            |            |      
+--------------------------------------------------------------------------------
+  NET "video_capture_0/video_capture_0/clk_ | 25.000ns   | 5.228ns    | 1    
+  271" PERIOD = 25 ns HIGH 50%              |            |            |      
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the
+   constraint does not cover any paths or that it has no requested value.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 2 mins 46 secs 
+Total CPU time to PAR completion: 2 mins 10 secs 
+
+Peak Memory Usage:  224 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 5
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - Trace H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+c:/Xilinx.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+--------------------------------------------------------------------------------
+Release 7.1.02i Trace H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc2vp30,-7 (PRODUCTION 1.91 2005-07-22)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 26175 paths, 0 nets, and 9828 connections
+
+Design statistics:
+   Minimum period:   9.817ns (Maximum frequency: 101.864MHz)
+
+
+Analysis completed Mon Feb 27 17:01:43 2006
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 1
+Total time: 8 secs 
+
+
+xflow done!
+cd implementation; bitgen -w -f bitgen.ut system
+Release 7.1.02i - Bitgen H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+c:/Xilinx.
+   "system" is an NCD, version 3.1, device xc2vp30, package ff896, speed -7
+Opened constraints file system.pcf.
+
+Mon Feb 27 17:01:52 2006
+
+Running DRC.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_0/ppc405_0/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin CPMC405CLOCK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin PLBCLK for the comp
+   ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM driven
+   clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMISOCMCLK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+WARNING:PhysDesignRules:1009 - Blockcheck: The clock pin BRAMDSOCMCLK for the
+   comp ppc405_1/ppc405_1/PPC405_i is not connected to the output of a DCM
+   driven clock buffer.
+DRC detected 0 errors and 6 warnings.
+Creating bit map...
+Saving bit stream in "system.bit".
+Creating bit mask...
+Saving mask bit stream in "system.msk".
+Bitstream generation is complete.
+*********************************************
+Initializing BRAM contents of the bitstream
+*********************************************
+bitinit system.mhs  -pe ppc405_0 config_decoder_revb/executable.elf  \
+-bt implementation/system.bit -o implementation/download.bit
+
+bitinit version Xilinx EDK 7.1.2 Build EDK_H.12.5.1
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/ppc405_v2_00_c/data/ppc405_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/jtagppc_cntlr_v2_00_a/data/jtagppc_cntlr_v
+2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_v34_v1_02_a/data/plb_v34_v2_1_0.tcl
+...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb2opb_bridge_v1_01_a/data/plb2opb_bridge
+_v2_1_0.tcl ...
+Sourcing tcl file
+C:/EDK/hw/XilinxProcessorIPLib/pcores/plb_bram_if_cntlr_v1_00_b/data/plb_bram_if
+_cntlr_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+jtagppc_cntlr (jtagppc_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_00_a\data\jtagppc_cntlr_v
+2_1_0.mpd:33 - tool overriding c_device value X2VP4 to 
+plb2opb_bridge (plb2opb) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\plb2opb_bridge_v1_01_a\data\plb2opb_bridge
+_v2_1_0.mpd:36 - tool overriding c_family value virtex2p to 
+bram_block (plb_bram_if_cntlr_1_bram) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_0.
+mpd:39 - tool overriding c_family value virtex2 to 
+dcm_module (dcm_0) -
+C:\EDK\hw\XilinxProcessorIPLib\pcores\dcm_module_v1_00_a\data\dcm_module_v2_1_0.
+mpd:56 - tool overriding c_family value virtex2 to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc405_0
+  (0x40600000-0x4060ffff) RS232_Uart_1	plb->plb2opb->opb
+  (0x40800000-0x4080ffff) i2c	plb->plb2opb->opb
+  (0xffff0000-0xffffffff) plb_bram_if_cntlr_1	plb
+Address Map for Processor ppc405_1
+
+Initializing Memory...
+Checking ELFs associated with PPC405 instance ppc405_0 for overlap...
+
+
+Analyzing file config_decoder_revb/executable.elf...
+Running Data2Mem with the following command:
+data2mem -bm implementation/system_bd -bt implementation/system.bit  -bd
+config_decoder_revb/executable.elf tag plb_bram_if_cntlr_1_bram  -o b
+implementation/download.bit 
+Memory Initialization completed successfully.
+
+*********************************************
+Downloading Bitstream onto the target board
+*********************************************
+impact -batch etc/download.cmd
+Release 7.1.02i - iMPACT H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+Connecting to cable (USB Port).
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2. LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2.Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver xusbdfwu.sys version: 1018 (1018).
+ Driver windrvr6.sys version = 6.2.2.2.
+Cable connection failed.
+Connecting to cable (COM1 Port).
+Cable connection failed.
+Cable connection failed.
+Cable connection failed.
+Cable connection failed.
+Cable autodetection failed.
+make: *** [download] Error 1
+Done.
+At Local date and time: Mon Feb 27 18:19:26 2006
+Command xbash -q -c "cd /cygdrive/c/xup/ref_design/Winter_2006/video_capture_00/; /usr/bin/make -f system.make clean; exit;" Started...
+rm -f implementation/system.ngc
+rm -f implementation/system.bmm
+rm -f implementation/system.bit
+rm -f implementation/system.ncd
+rm -f implementation/system_bd.bmm 
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp system.srp
+rm -rf ppc405_0/lib/
+rm -rf ppc405_1/lib/
+rm -f config_decoder_revb/executable.elf 
+rm -rf simulation/behavioral
+rm -rf virtualplatform
+rm -f _impact.cmd
+Done.
